@@ -1,0 +1,87 @@
+2013-01-08  Jeremy Cribb <jcribb@email.unc.edu>
+	* power_law_fitting.m:  added output variable, t.
+
+2012-08-12 Christian Stith <chstith@ncsu.edu>
+	* power_law_fitting_fabry.m: added. implements Fabry's adaptation of the power law model.
+
+2011-06-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* carreau_chhabra_fit.m:  removed 'ShowStatusWindow' parameter.  It was deprecated in a previous version of Matlab and now throws errors.
+	* cross_model_fit.m: same.
+	* KV_step_fit.m: same.
+	* MM_step_fit.m: same.
+	* jeffrey_step_fit.m: same.
+
+2011-02-25 Thomas Sayre-McCord <thomassm@email.unc.edu>
+	* power_law_fitting.m: added. Fits creep data to a power law using linear regression of logarithmic values
+
+2011-01-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* carreau_model_fit.m:  tweaked parameters for fit.
+	* new_carreau_fit.m:  added.  uses matlab's new fitting code.  Intend to retrofit other fitting functions and will use this as the template.
+
+2009-05-04  Jeremy Cribb <jcribb@email.unc.edu>
+	* carreau_model_fun.m: removed unneeded computation.
+
+2009-02-03  Jeremy Cribb <jcribb@email.unc.edu>
+	* carreau_chhabra_fit.m: added.  fits shear thinning data to carreau-like model used by Chhabra in 2001
+	* carreau_chhabra_fun.m: added.  fitting equation for carreau_chhabra_fit.m
+	* carreau_model_fit.m:  fixed bounds on fitting parameters.  Works MUCH better.
+	* jeffrey_step_fun.m: cosmetic changes to better conform to mlint's suggestions.
+	
+2008-11-20  Kris Ford <krisford@email.unc.edu>
+	* .cvsignore: added .mat files
+	* jeffrey_step_fit.m: modified documentation to better match Mathworks convention
+	* jeffrey_step_fun.m: same
+	* KV_step_fit.m: same
+	* KV_step_fun.m: same
+	* carreau_model_fit.m: same
+	* carreau_model_fun.m: same
+	* cross_model_fit.m: same
+	* meter_fit.m: same
+	* meter_fun.m: same
+	* MM_step_fit.m: same
+	* MM_step_fun.m: same
+	* powerlaw_model_fit.m: same
+	* powerlaw_model_fun.m: same
+	* stretched_exp_fun.m: same
+	* stretched_exponential_fit.m: same
+	
+2008-10-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* .cvsignore added by Kris Ford on 2008-10-28
+	* carreau_model_fit.m: explicity set upper and lower bounds.
+	* meter_fit.m: added. performs fit for the Meter model (stress dependence).
+	* meter_fun.m: added. fitting function for the Meter model (stress dependence).
+	* cross_model_fit.m: fixed bug in fitting equation.
+	* cross_model_fun.m: same.
+
+2008-10-15  Jeremy Cribb <jcribb@email.unc.edu>
+	- carreau_model_fit.m: fixed bug in fitting equation.
+	- carreau_model_fun.m: same.
+
+2008-09-10  Jeremy Cribb <jcribb@email.unc.edu>
+	* carreau_model_fit.m: added.  performs fit for the Carreau-Yasuda model, a non-linear model for shear thinning/thickening in macroscale rheology.
+	* carreau_model_fun.m: added.  contains fitting function for Carreau-Yasuda model.
+	* cross_model_fit.m: adjusted options parameters for better fitting and removed log-space representation of function.
+	* cross_model_fun.m: removed log-space representation of function.
+	
+2008-03-19  Jeremy Cribb <jcribb@email.unc.edu>
+	* KV_step_fit.m: fixed typo in help comments.
+	* cross_model_fit.m: added.  performs fit for the Cross Model, a non-linear model for shear thinning/thickening in rheology.  
+	* cross_model_fun.m: added.  contains fitting function for Cross Model.
+	* powerlaw_model_fit.m: added.  performs fit for powerlaw model, a non-linear model for shear thinning/thickening in rheology.
+	* powerlaw_model_fun.m: added.  contains fitting function for powerlaw_model.
+	
+
+2007-08-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* stretched_exp_fit.m: added. performs fit for stretched exponential decay.
+	* stretched_exp_fun.m: added. contains fitting function for stretched exponential function.
+
+2007-03-19  Jeremy Cribb <jcribb@email.unc.edu>
+	* jeffrey_step_fit.m: moved from parent folder.
+	* jeffrey_step_fun.m: moved from parent folder.
+	* KV_step_fit.m:  added.  performs fit for step response of a Kelvin-Voight fluid.
+	* KV_step_fun.m:  added.  contains fitting function for Kelvin-Voight fluid.
+	* MM_step_fit.m:  added.  performs fit for step response of a Maxwell fluid.
+	* MM_step_fun.m:  added.  contains fitting function for Maxwell fluid.
+	* Changelog.txt:  this file. added.
+	
+

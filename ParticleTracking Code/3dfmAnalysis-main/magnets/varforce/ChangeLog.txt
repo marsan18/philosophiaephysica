@@ -1,0 +1,155 @@
+2013-04-01  Jeremy Cribb <jcribb@email.unc.edu>
+	* vfd_fps.m:  minor cosmetic changes to documentation.
+
+2012-08-12  Christian Stith <chstith@ncsu.edu>
+	* vfd_fps: updated to not overwrite existing fps values.
+	* varforce_drive_gui_beta.fig: added. updated version of vfd GUI. now includes test options.
+	* varforce_drive_gui_beta.m: added. same.
+
+2012-07-11  Christian Stith <chstith@ncsu.edu>
+	* vfd_fps: added. updates old .vfd.mat files to include fps field.
+	* varforce_drive_gui.m: updated GUI to include frames per second input.
+	* varforce_drive_gui.fig: same.
+	* varforce_drive.m: added fps storage and implementation.
+
+2012-05-29  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_drive.m: added coil geometry for surface-attached posts project for Briana Fiser.
+	* varforce_drive_gui.fig: same.
+
+2009-02-25  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_todo.txt: updated list.
+	* varforce_get_force: reduced step size for voltage interpolation.
+
+2008-03-07  Kris Ford <krisford@email.unc.edu>
+	* Added .mat files to cvsignore
+	* varforce_analysis_gui.m: modified documentation to better match Mathworks convention
+	* varforce_compute_inst_force.m: same
+	* varforce_compute_linefit_force.m: same
+	* varforce_compute_sat_data.m: same
+	* varforce_construct_spatial_map.m same
+	* varforce_drive.m: same
+	* varforce_drive_gui.m: same
+	* estimate_varforce_pulse_widths: same
+	* varforce_get_force.m: same
+	* varforce_handle_degauss.m: same
+	* varforce_init.m: same
+	* varforce_plot_drift_vectors.m: same
+	* varforce_plot_force_distance.m: same
+	* varforce_plot_force_power_law.m: same
+	* varforce_plot_powerlaw_vs_current.m: same
+	* varforce_plot_sat_data.m: same
+	* varforce_remove_buffer_points.m: same
+	* varforce_remove_drift.m: same
+	* varforce_run.m: same
+
+2008-10-27  Jeremy Cribb <jcribb@email.unc.edu>
+	* .cvsignore: added. set to ignore matlab's autosave files (*.asv)
+	* varforce_compute_sat_data.m: added comments.
+
+2008-09-25  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_init.m: fixed bug where last sequence was not being used at all.
+	* varforce_run.m: same.
+	* varforce_todo.m: updated.
+
+2008-09-16  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_run.m: fixed bug where degauss at beginning would return an empty set when trying to estimate remanance.  Now the code checks to see if the degauss location is at the middle or beginning of the zero-voltage region.
+
+2008-05-27  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_compute_linefit_force.m: fixed a bug that assigned a VoltageID as a Voltage.
+	* varforce_compute_sat_data.m: cosmetic changes.
+	* varforce_plot_force_power_law.m: cosmetic changes.
+	* varforce_plot_sat_data.m: cosmetic changes.
+	* varforce_run.m: updated comments.
+	* varforce_drive.m: fixed typo in documentation.
+	* varforce_get_force.m: reduced stepsize for force interpolation.
+
+2008-03-17  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_constants.m: Changed indexing of voltage to an index of voltageIDs.  This way one can have two regions in one sequence with the same voltage value.
+	* varforce_analysis_gui.m: same.
+	* varforce_compute_inst_force.m: same.
+	* varforce_compute_sat_force.m: same.
+	* varforce_drive_gui.m same.
+	* varforce_init.m: same.
+	* varforce_remove_buffer_points.m: same.
+	* varforce_remove_drift.m: same.
+	* varforce_run.m: same.
+
+2008-03-07  Jeremy Cribb <jcribb@email.unc.edu>
+	* varforce_drive_gui.m: fixed typo (myDAQid -> params.myDAQid)
+
+2008-02-27  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_drive_gui.m: updated call to zerodaq.
+	- varforce_init.m: same.
+
+2008-02-27  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_drive_gui.fig: recommitted bober's changes.  something woncky happened last time.
+
+2008-02-26  Jeremy Cribb <jcribb@email.unc.edu>
+	 - varforce_drive.m: added code changes by david bober that includes degauss routines specific for the high-throughput magnetics system.
+	 - varforce_drive_gui.m: same.
+	 - varforce_drive.gui.fig: same.
+	 
+2008-01-07  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_drive.m: added wake forest pole geometry.
+	- varforce_drive_gui.fig: same.
+	
+2007-08-30  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_get_force.m: fixed typo.
+	- varforce_remove_buffer_points.m: fixed an edge condition (when number of buffer points becomes zero).
+
+2007-03-19  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_to_do.txt: updated list.
+	- varforce_plot_sat_data: removed unnecessary plot.
+
+2007-02-13  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_drive.m: added the comb geometry.
+	- varforge_drive_GUI.fig: same.
+
+2007-01-19  Ben Smith <jaminben@email.unc.edu>
+	- varforce_compute_inst_force: changed all "PULSE" to "VOLTS" because it is a better description of the value.
+	varforce_compute_linefit_force: same
+	varforce_constants: same
+	varforce_init: same
+	varforce_remove_buffer_points: same
+	varforce_remove_drift: same
+	varforce_run: same
+
+2006-12-11  Jeremy Cribb <jcribb@email.unc.edu>
+	- varforce_drive_GUI: added.  GUI for running driving code.
+
+	- varforce_drive: added.  driving code for varforce protocol.
+
+	- varforce_constants: added.  script that creates column constants for varforce calibration data matrix.
+
+	- varforce_run: added.  provides a sample function for running varforce calibration from the command line.  also useful in testing varforce code and developing additional analysis tools from the data.  very well commented to explain the protocol.  For now, the analysis GUI runs from this function.
+    
+	- varforce_init: added.  initializes and loads experimental parameters and video tracked data.  Requires user interaction to define breakpoint between two sequences as the temporal alignment between the driving computer and the video acquisition computer is not very good (needs to be <8ms for pulnix video).  Assigns pulse voltage and sequence ID for each tracker.
+
+	- varforce_remove_drift: added.  finds zero volt regions in each sequence, estimates drift, and subtracts it only from that sequence.  (uses remove_drift in 3dfmAnalysis) 
+    
+	- varforce_remove_buffer_points: added.  removes a given number of points that surround the shifts in voltage.  This should reduce the crosstalk between voltages as well as preferentially filter out any nonlinear shifts in the tracker position due to loose coils or other mechanical instability.
+    
+	- varforce_compute_inst_force: added.  compute force using instantaneous velocity method.  Searches for velocities at given voltages and generaes a forcemap for each.  Not completely finished.
+
+	- varforce_compute_linefit_force:  added.  computes force using matlab's "robust" linear fit method for each pulse in each sequence.  Points considered by robustfit to be outliers are disregsrded from by fitting routine and helps to reduce error in force detemrination.
+    
+	- varforce_handle_degauss: added.  finds zero volt regions in each sequence, estimates remanence force in pre-degauss regions via a linear fit to get the velocity.  Remanence is computed for each pre-degauss region in each sequence for each bead separately.  After the remanence is computed, the pre-degauss regions of the zero volt pulse are removed from the data matrix.  Presumably any drift remaining after degauss is due to sample drift and not due to remanent magnetization.
+    
+	- varforce_construct_spatial_map: added.  bins the data into pixels of selected size and calculates the force in each bin for each voltage in the experiment.  Computes error as well.
+
+	- varforce_compute_sat_data: added.  computes power law of log(distance) vs. log(force) for each voltage.  It uses these fits to place all data on one grid, allowing force from different voltages to be compared at the same distance. These data are later used to plot the saturation curve.
+
+	- plot_2d_spatial_calib: added.  For given data, plots the varforce calibration data as a 2d scalar fields with a hot colormap.  
+
+	- plot_force_power_law: added.  Plots log(distance) vs. log(force) along with power law fit for all voltages. These plots can add confidence to the saturation data produced by the power law.
+
+	- plot_sat_data: added.  For several position series, plots the data as force vs. current.  Useful for determining saturation currents for a dataset.
+
+	- plot_powerlaw_vs_current: added.  Plot the power law exponents versus current to learn more about the power laws that govern forces at given driving currents.
+    
+	- varforce_analysis_GUI: added.
+    using varforce_run as a template, or even as a called function, to generate a GUI for handling the customizable parameters in processing a varforce dataset.
+
+2006-08-08  Jeremy Cribb <jcribb@email.unc.edu>
+	* changelog.txt:  added this changelog for the variable force calibration protocol.
+	

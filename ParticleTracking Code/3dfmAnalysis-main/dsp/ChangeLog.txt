@@ -1,0 +1,61 @@
+2008-11-14 Kris Ford <krisford@email.unc.edu>
+	* .cvsignore: added
+	* mypsd.m: modified documentation to better match Mathworks convention
+	* myspectrogram.m: same
+	* thd.m: same
+	* vrpn_psd.m: same
+
+2006-08-25  Kalpit Desai <kvdesai@email.unc.edu>
+	* processpeak.m: More robust method of accurately locating the nearest point to the search frequency.
+
+2006-05-29  Kalpit Desai <kvdesai@email.unc.edu>
+	* myspectrogram.m: 
+	- Replaced the input argument 'frequency resolution' by 'time resolution' because time resolution is more intuitive.
+	- Instead of finest possible resolution, the default is now set to achieve best tradeoff between time resolution and frequency resolution.
+	- Exposed one more output argument: PSD for each time segment
+
+2006-05-27  Kalpit Desai <kvdesai@email.unc.edu>
+	* mypsd.m: Fixed the crash when input signal had more columns than rows. Now if needed, warns the user and transposes the input matrix before computing psd.
+
+2006-05-15  Kalpit Desai <kvdesai@email.unc.edu>
+	* mypsd.m: Fixed a bug in calculation of default frequency resolution.
+	* myspectrogram.m: same.
+	* processpeak.m: Better handling of boundary cases. Also fixed a bug that caused program to return zero values when search frequency falled exactly between two bins.
+
+2006-05-05  Kalpit Desai <kvdesai@email.unc.edu>
+	* myspectrogram.m: Added. This function wraps the matlab-inbuilt 'spectrogram' function with parameters that are easy to understand for the user. Analogous to 'mypsd' and 'mytfe'.
+
+2006-04-03  Jeremy Cribb <jcribb@email.unc.edu>
+	* mypsd.m: fixed typo in printed output.
+
+2005-12-22  Kalpit Desai <kvdesai@cs.unc.edu>
+	* mypsd.m: 
+	- Calculation of 'integrated displacement' is much efficient now.
+	- Last argument, flag for calculating id, is now obsolete and ignored.
+	- Improved documentation
+
+2005-09-24  Kalpit Desai <kvdesai@cs.unc.edu>
+	* processpeak.m: Made interactive. 
+
+2005-09-13  Kalpit Desai <kvdesai@cs.unc.edu>
+	* mypsd.m: 
+	- Made to exit gracefully and report some plain english errors when input parameters are inconsistent. 
+	- Fixed some comments.
+2005-09-08  Kalpit Desai <kvdesai@cs.unc.edu>
+	* mypsd.m: Added couple of more options for window types and handled when the supplied window type is unacceptable.
+2005-06-27  Jeremy Cribb <jcribb@email.unc.edu>
+	* vrpn_psd.m:  fixed several syntactial errors so that vrpn_psd actually works now.
+	* mypsd.m: fixed typo in documentation.
+
+2005-01-19  Kalpit Desai <kvdesai@cs.unc.edu>
+	* added processpeak.m : Takes two vectors [p,f] that are output of psd calculatios, and converts the power at particular frquency (fsearch) in to units of amplitude of sinewave at that particular frequency. A handy utility for interpreting psd data.
+
+2005-01-10  Kalpit Desai <kvdesai@cs.unc.edu>
+	* mypsd.m : fixed a typo in calculation of cumulative displacement
+2004-06-11  Kalpit Desai <kvdesai@cs.unc.edu>
+	* mypsd.m : renamed 'window' variable to 'win' and 'windowtype' to 'window_type'.	
+
+2004-05-18  Jeremy Cribb <jcribb@email.unc.edu>
+
+	* Initial Version
+

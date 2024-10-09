@@ -1,0 +1,17 @@
+2005-01-10  Kalpit Desai 	<kvdesai@cs.unc.edu>
+	* analysis.m
+	- made the 'continuous' mode for velocity calculations so that it can work without any magnet log. Still needs magnet log for 'discrete' mode.
+
+2004-05-19  Kalpit Desai 	<kvdesai@cs.unc.edu>
+	* analysis.m : 
+	- changed 'um' to 'u' in the argument of load_vrpn_tracking
+	- replaced all '.stage.' with '.stageCom.'
+
+2004-05-18  Kalpit Desai <kvdesai@cs.unc.edu>
+
+	* analysis.m : Updated use of load_vrpn_tracking to match with the changes made to load_vrpn_tracking.m.
+
+2004-05-18  Jeremy Cribb <jcribb@email.unc.edu>
+
+	* Initial Version
+

@@ -1,0 +1,159 @@
+2013.07.10  Jeremy Cribb <jcribb@email.unc.edu>
+	* dmbr_report.m: added logging function.
+
+2013-05-10  Christian Stith <chstith@ncsu.edu>
+	* dmbr_init.m: updated to implement optional frame rate input.
+	* dmbr_report_cell_expt: same.
+	* dmbr_run.m: same.
+
+2013-05-10  Christian Stith <chstith@ncsu.edu>
+	* dmbr_adjust_breakpoint.m: converted file addending to overwriting
+
+2013-05-10  Christian Stith <chstith@ncsu.edu>
+	* dmbr_report_cell_expt.m: added html title declaration.
+	* dmbr_adjust_breakpoint.m: fixed adjust breakpoint bug.
+	* dmbr_multi_file_report.m: same.
+	* dmbr_adjust_report: same.
+
+2013-05-10  Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report.m: updated comments.
+	* dmbr_report_cell_expt.m: same.
+	* dmbr_adjust_breakpoint.m: same.
+	* dmbr_locate_trackfile: same.
+
+2013-04-01  Jeremy Cribb <jcribb@email.unc.edu>
+	* dmbr_locate_trackfile.m: added on the behalf of Christian Stith.  It finds a matching tracking file in the current directory.
+	* dmbr_adjust_breakpoint: added.  This changlog claims this file was added on 03-15 but when updating CVS has no knowledge of the function's existence.   Adding it now.
+
+2013-03-15 Christian Stith <chstith@ncsu.edu>
+	* dmbr_adjust_breakpoint: added. implements a breakpoint-changing function for use with multi-file report.
+	* dmbr_multi_file_report: edited to accommodate dmbr_adjust_breakpoint.
+	* dmbr_report_cell_expt: same.
+
+2013-02-01 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report.m: implemented functionality for g ratios in the html report, along with the option for this in the gui.
+	* dmbr_report_cell_expt.m: same.
+
+2012-12-05 Ben Rardin <rardinb@live.unc.edu>
+	*dmbr_report_cell_expt: added force response values to the html file that the function generates.
+
+2012-10-24 Ben Rardin <rardinb@live.unc.edu>
+	*dmbr_multi_file_report: bug fixed. The excel report created by the GUI now generates the correct "G ratios" when data has been filtered  (removal of certain beads, pulls, etc.) and re-run in the multifilereport GUI.
+
+2012-10-08 Ben Rardin <rardinb@live.unc.edu>
+	* dmbr_mf_concat: bug fixed. No longer is necessary to delete end of file characters in the created seqdat.txt file
+
+2012-10-04 Christian Stith <chstith@ncsu.edu>
+	* dmbr_mf_concat: added. concatenates multiple *.seqdat.txt files into one. functional; known bug described in header.
+
+2012-08-13 Christian Stith <chstith@ncsu.edu>
+	* multi_file_report_readme.txt: added. comprehensive MFR user guide.
+	* dmbr_adjust_report.m: finalized comment header.
+	* dmbr_multi_file_report.m: same.
+	* dmbr_report_cell_expt.m: same.
+
+2012-08-13 Christian Stith <chstith@ncsu.edu>
+	* dmbr_run.m: added sequence selector functionality. conditionally implemented, should not affect unrelated activities.
+	* dmbr_report_cell_expt.m: modified dmbr_run call.
+
+2012-08-13 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report.m: fixed Excel analysis generation bug.
+	* dmbr_report_cell_expt.m: added cosmetic plot changes. rationalized plot naming system.
+
+2012-08-12 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report.m: added filtering functionality to initial file selection process.
+
+2012-08-12 Christian Stith <chstith@ncsu.edu>
+	* dmbr_adjust_report.m: updated to remove deselected files and beads. improved figure closing.
+	* dmbr_analysis_gui.fig: added Power Law (Fabry) model.
+	* dmbr_fit.m: added Power Law (Fabry) model.
+	* dmbr_multi_file_report.m: improved file sorting and main directory tracking. generalized excel analysis output format. added Power Law (Fabry) Model.
+	* dmbr_report_cell_expt.m: generalized fit type and excel output. Added Power Law (Fabry) model.
+
+2012-07-30 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report.m: removed directory bug. needs work.
+	* dmbr_report_cell_expt.m: removed vfd_fps call. needs work.
+	* dmbr_init.m: adjusted fps access to include index.
+
+2012-07-12 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report.m: added general trackingfile finder function.
+	* dmbr_report_cell_expt.m: added general trackingfile finder function. improved Jeffrey plotting.
+
+2012-07-11 Christian Stith <chstith@ncsu.edu>
+	* dmbr_adjust_report.m: cleaned up GUI appearance.
+	* dmbr_init.m: added fps functionality.
+	* dmbr_multi_file_report.m: added plot selection gui & functionality. improved initial breakpoint setting algorithm.
+	* dmbr_report_cell_expt.m: added Jeffrey plot model option. added plot selection functionality. improved plotting procedures.
+
+2012-06-28 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report: Fixed multi-directory analysis bug.
+	* dmbr_adjust_report.m: "
+	* dmbr_report_cell_expt.m: "
+
+2012-06-28 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report: fixed GUI filename bugs.
+	* dmbr_adjust_report.m: fixed Excel sidebar printout bug.
+
+2012-06-28 Christian Stith <chstith@ncsu.edu>
+	* dmbr_multi_file_report: added. allows for multiple files and directories to be run through dmbr_report_cell_expt, creating a single large report.
+	* dmbr_adjust_report.m: added. allows for selection of individual sequences for inclusion in report.
+	* dmbr_report_cell_expt.m: added comments. improved functionality and allowed for interaction with dmbr_multi_file_report and dmbr_adjust_report.
+
+2012-06-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* dmbr_plot_data.m: displacement plots now show a title with average displacement of last ten data points.
+
+2012-06-13 Christian Stith <chstith@ncsu.edu>
+	* dmbr_compute_compliance.m: adapted compliance calculation to approximate compliance for zero-force period
+	* dmbr_report_cell_expt.m: added excel output functionality, corrected displacement output
+
+2012-6-11 Christian Stith <chstith@ncsu.edu>
+	* dmbr_relaxation_time.m: removed problematic whitespace
+	* dmbr_run.m: reimplemented fit function, moved counter to correct position
+	* dmbr_report_cell_expt.m:  added.  used dmbr_report to create a new reporting function specifically for the cell pulling experiment as specified by Luke.
+	
+2011-10-25 Thomas Sayre-McCord <thomassm@email.unc.edu>
+	* dmbr_fit.m: added power law fitting to fit options
+    	* dmbr_analysis_gui.fig: added "Power Law" as an option in fitting popdown menu
+
+2011-01-18 Thomas Sayre-McCord <thomassm@email.unc.edu>
+	* dmbr_compute_compliance: added a method of computing compliance that models a 	bead of radius a as half submerged in the cell. (Currently commented out in 	favor of old method)
+
+2010-11-04 Thomas Sayre-McCord <thomassm@email.unc.edu>
+    	* dmbr_direct_moduli: added. computes storage and loss moduli from compliance data, same as direct_moduli
+    	* dmbr_analysis_gui: added 'storage and loss moduli' to plotting browser drop down menu
+    	* dmbr_plot_data: added 'storage and loss moduli' as a case, uses dmbr_direct_moduli to compute starge and loss moduli, then plots them.
+
+2009-06-16 Stephen Norris <srnorris@email.unc.edu>
+	* dmbr_run.m: fixed error for mean curve plotting.
+	* dmbr_plot_data: same.
+	* Note: These files were actually altered in last commit, but because commit happened recursively, these comments didn't make it in (as they were not made yet).
+
+2009-05-07 Stephen Norris <srnorris@email.unc.edu>
+	* .dmbr_todo.txt: added Jeffrey fit viscosity comment 
+
+2009-05-05  Jeremy Cribb <jcribb@email.unc.edu>
+	* .cvsignore: added.  
+	* dmbr_mean_creep_curves.m: removed.  obsolete.
+	* dmbr_compute_mean_curves.m: added.  computes all significant mean values for dmbr datasets.
+	* dmbr_plot_data.m: updated to include mean figures and plotting "stacked" sequences.
+	* dmbr_analysis_gui.fig: same.
+	* dmbr_analysis_gui.m: same.
+	* dmbr_report.m: cosmetic changes only.  will soon update this substantially.
+	* dmbr_run.m: computes offsets for each sequence/voltage.
+	
+	
+2009-05-04  Jeremy Cribb <jcribb@email.unc.edu>
+	* dmbr_plot_data.m: switched to plotting as a position of strain rather than a radial distance.
+
+2009-05-04  Jeremy Cribb <jcribb@email.unc.edu>
+	* dmbr_relaxation_time.m: added handling of edge case to avoid error.
+	* dmbr_run.m: changed default analyses.
+	* dmbr_analysis_gui.fig: prettified gui for linux.
+	* dmbr_analysis_gui.m: prettified gui for linux.	
+
+2008-03-04  Jeremy Cribb <jcribb@email.unc.edu>
+	* dmbr_plot_data.m: added text annotations that indicate (S)tart and (E)nd points on the shear thinning curve (apparent viscosity vs. max shear rate)
+
+2009-02-26  Jeremy Cribb <jcribb@email.unc.edu>
+	* Initial Version of driven microbead rheology analysis package.
+

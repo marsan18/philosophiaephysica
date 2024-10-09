@@ -1,0 +1,359 @@
+2013.07.30  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: fixed logentry function.
+	* msdstat.m: same.
+	* plot_alphadist.m: same.
+	* plot_alphavstau.m: same.
+	* plot_msd.m: same.
+	* plot_ve.m: same.
+	* ve.m: same.
+	* video_msd.m: same.
+	
+2013-07-19  Jeremy Cribb <jcribb@email.unc.edu>
+	* plot_ve.m:  now plots G* and eta* too.
+
+2013-06-03  Jeremy Cribb <jcribb@email.unc.edu>
+	* video_msd.m:  added parameter that limits the available time scales to defined percentage of video duration (identified and calculated here by frame IDs).
+
+2012-12-10  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: No longer a fatal error to input no data.  Now an error message is sent to display/logfile and an empty dataset is outputted instead.
+	* msdstat.m: same.
+	* ve.m: same.
+
+2012-06-26  Jeremy Cribb <jcribb@email.unc.edu>
+	* ve.m: now includes raw data in ve output structure.
+	* plot_alphadist.m: added.  plots alpha distribution for an input tau.
+	* plot_alphavstau.m: added.  plots alpha (slope of msd) as a function of tau.
+
+2012-03-31  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: added option for calculating step-size distributions.
+	* video_msd.m: now accommodates new options for msd.m 
+
+2011-10-09  Jeremy Cribb <jcribb@email.unc.edu>
+	* msdstat.m: implemented new 'baseline' variable
+
+2011-09-09  Jeremy Cribb <jcribb@email.unc.edu>
+	* msdstat.m: fixed bug in msdstat structure.
+
+2011-09-09  Jeremy Cribb <jcribb@email.unc.edu>
+	* msdstat.m:  better handling of "empty set" cases.
+	* video_msd.m:  added 'window' to output msd structure.  better handling of "empty set" cases.
+
+2011-08-09  Jeremy Cribb <jcribb@email.unc.edu>
+	* getMSDslope.m:  now handles empty case for input parameters.
+	* msd.m: removed 'winedge' parameter.  now keeps squared displacements "r^2" only the function is asked to output it.
+	* plot_msd.m: now handles empty case for input parameters.  changed coloring and linewidth of the mean to make it easier to see amongst individual measurments.
+	* msdstat.m: now handles empty case for input parameters.  added logentry capability.
+	* plot_ve.m: same.
+	* ve.m: same.
+	* video_msd.m: same.  also handles squared displacments only when asked.	
+
+2011-07-20  Jeremy Cribb <jcribb@email.unc.edu>
+	* video_msd.m:  uses numeric input (in place of file names) regardless of input units and ignores the conversion with calib_um. 
+	* ve.m: removed old commented code.  removed a parameter that is no longer needed.
+
+2011-07-19  Jeremy Cribb <jcribb@email.unc.edu>
+	* video_msd.m:  assumes numeric input (in place of file names) has units of pixels (the same as if the file were loaded) and uses the calib_um accordingly.
+
+2011-07-18  Jeremy Cribb <jcribb@email.unc.edu>
+	* plot_msd.m: now returns the figure handle created/used when plotting the msd.
+	* plot_ve.m: same.
+	* video_msd.m: now it converts displacement data from 'pixels' to 'me' as it loads the data through 'load_video_tracking' instead of handling it on its own.
+
+2011-07-01  Jeremy Cribb <jcribb@email.unc.edu>
+	* msdstat.m:  added.  handles computing statistics on msd datasets.
+	* video_msd.m:  added back in the option to record each squared displacment.
+	* plot_msd.m:  now uses msdstat instead of computing stats on its own.  added 'u' as a plotting option to plot MSD in microns^2 instead of meters^2
+	* ve.m:  removed some old commented out code.
+
+2011-06-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* plot_msd_2pt.m:  added on behalf of Thomas Sayre_McCord.  plots the 2pt MSD as a function of time scale.
+	* plot_ve_2pt.m:  added on behalf of Thomas Sayre_McCord.  plots the 2pt Generalized stokes-einstein relation as a function of frequency.
+
+2011-05-05  Jeremy Cribb <jcribb@email.unc.edu>
+	* plot_msd.m:  added trackerID values to 'DisplayName' for each MSD curve.  Identifies each MSD curve for better traceback along analysis pipeline.
+
+2011-02-10  Jeremy Cribb <jcribb@email.unc.edu>
+	* video_msd.m:  modified the scheme for determining tau windows.  The window input parameter, when a scalar denotes the number of window sizes desired from the minimum and maximum available (with repeats filtered out).  When 'window' is a vector, the old default behavior takes over, where the vector contains the exact window sizes of tau when computing the MSD. 
+
+2011-01.13  Jeremy Cribb <jcribb@email.unc.edu>
+	* getMSDslope.m: added.  souped up way of computing alpha values that uses brian eastwoods edge_detector_1d code.  Originally Ricky Spero's code, I've tweaked it and added it here. Computing the GSER (ve.m) now uses this method.
+
+2011-01-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: removed cvs diff text.
+	* ve.m: same.
+
+2011-01-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m:  now tallies the number of estimates per tau and provides as output.  Used to compute weighted statistics.
+	* video_msd.m: now computes weighted statistics so that the mean and error for the MSD are better influenced by the number of individual bead measures. 
+	* plot_msd.m: also updated for new statistics measures and tweaked plots.
+	* ve.m: changed to use the mean MSD as an imput instead of the individual MSD curves for each bead.  Takes advantage of weighted statistics to minimize bias/error.  Estimates error differently, now propagates max.min MSDs through the GSER function.
+	* plot_ve.m: alse uses new stats measures and tweaked plots.
+	
+2010-09-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m:  added the 'winedge' functionality that limits each path to window sizes that are some factor smaller than the path length.  The default size is '1' that replicates previous behavior.  To restrict a path's windows to 80% of the path-length, set to '0.8'.
+	* plot_msd.m: clarified documentation.
+	* sim_msd.m: modified call to 'sim_newt_fluid' for the new 'numpaths' argument.
+	* ve.m: added an argument that eliminates data points that have less than a desired population size.
+	* video_msd.m: added usage of 'winedge' from msd.m and 'nmin' from ve.m.
+
+2009-09-04 Ricky Spero <rspero@physics.unc.edu>
+	* msdt.m Numerous minor modifications. Commented code, added x and y outputs for greater flexibility in usage.
+
+2009-05-22  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: fixed bug that was doubling MSD of x instead of looking at both x and y.
+
+2009-05-04  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: slight cosmetic changes in algorithm for better readibility and possible export of r2 values.
+
+2008-11-20  Kris Ford <krisford@email.unc.edu>
+	* .cvsignore: added .mat files
+	* make_trace.m: modified documentation to better match Mathworks convention
+	* msd.m: same
+	* msd2pt.m: same
+	* msdbase.m: same
+	* msdhist.m: same
+	* msdt.m: same
+	* batch_enhance_contrast.m: same
+	* bead_dist.m: same
+	* laser_msd.m: same
+	* laser_msd_crossover.m: same
+	* plot_msdt.m: same
+	* plot_ve.m: same
+	* rod_coord_corr.m: same
+	* rod_msd.m: same
+	* rod_ve.m: same
+	* sim_msd.m: same
+	* ve.m: same
+	* video_msd.m: same
+	* plot_msd.m: same
+	* plot_msdhist.m: same
+
+2008-10-30  Jeremy Cribb <jcribb@email.unc.edu>
+	- changelog.txt.  this file.  re-commiting with last commit's comments.
+
+2008-10-28  Jeremy Cribb <jcribb@email.unc.edu>
+	- .cvsignore: added. ignores .asv (matlab autosave)
+	- ve.m: updated documentation.
+
+2008-09-03  Jeremy Cribb <jcribb@email.unc.edu>
+	- ve.m: fixed calls to NaN functions.  Matlab 7+ has added matrix "awareness" for these functions.  The result was a bug where mean, std, etc... were not computed correctly without identifying the direction these operations should act on.  This update also allowed the code to look much cleaner because there was no need to transpose and re-transpose all of these values.
+	- plot_ve.m: same.
+
+2008-02-26  Jeremy Cribb <jcribb@email.unc.edu>
+	- msdhist.m: now filters out empty msds for unavailable data in short tracks.
+
+2008-02-26  Jeremy Cribb <jcribb@email.unc.edu>
+	- msdhist.m: removed plotting code.
+	- plot_msdhist.m: removed computations.
+
+2008-02-26  Jeremy Cribb <jcribb@email.unc.edu>
+	- diffdist.m: added. computes squared distances.
+	- msdhist.m: added.  computes histogram of squared displacements.
+	- msdt.m: added.  computes msd as a function of time, mainly by selective windowing of data.
+	- plot_msdhist.m: added. plotting code for msdhist.
+	- plot_msdt.m: added. plotting code for msdt.
+	- msd.m: added output of squared displacements.
+	- video_msd.m: adjusted for new squared displacement output.
+
+2007-11-09  Jeremy Cribb <jcribb@email.unc.edu>
+	- msd.m: beautified code to comply with matlab 7.5's "advice".
+	- ve.m: added figure handling.
+	- plot_msd.m: added figure handling.
+	- plot_ve.m: added figure handling.
+	- video_msd.m: beautified code to comply with matlab 7.5's "advice".
+
+2007-10-29  Jeremy Cribb <jcribb@email.unc.edu>
+	- sim_msd.m: made code friendlier.
+	- ve.m: made code friendlier.
+
+2007-08-30  Jeremy Cribb <jcribb@email.unc.edu>
+	- msd.m: fixed typo.
+	- plot_msd.m: added figure handling.
+	- video_msd.m: fixed typo.
+
+2007-06-12  Briana Carstens <blcarste@physics.unc.edu>
+	- msd.m: removed plotting code.  removed loading video code.  generalized to include simulated data.
+	- video_msd.m: added.  loads video data and uses new msd to compute msd curve.
+	- plot_msd.m: added.  plots common mean-squared-displacment curves.  These plots used to be automatically generated by msd.  
+	- sim_msd.m: added.  simulates MSD curves for datasets containing variable numbers of trackers for a given duration and sampling rate.  Used to help validate msd and ve computations.
+
+2007-01-25  Jeremy Cribb <jcribb@email.unc.edu>
+	- plot_ve.m: added.  plots viscoelastic moduli given data from ve.m
+	- ve.m: removed plotting code and made new function.
+	- msd.m: filtered the sample count for NaNs so that ve works again.
+
+2006-08-01  Kalpit Desai <kvdesai@email.unc.edu>
+	* msdbase.m: 
+	- Turned off interpolation when timestamps are uneven. Instead just warns on console and computes the error in Tau.
+	- Reports error in Tau.
+	* laser_msd_crossover.m:
+	- Added. A utility that computes average msd for an ensemble of tracking files. 
+	- Computes msd for bead position, position error and stage position and plots them to show crossover.
+	- Handy to determine feedback bandwidth.
+	* laser_msd.m:
+	- Changed to call newly added logerrorbar instead of manually setting up the errorbars.
+	- Some comments about the bad interface to external code that needs to be improved at some point.
+
+2006-07-11  Jeremy Cribb <jcribb@email.unc.edu>
+	- msd.m: suppressed warning for dividing by zero when requested window is too large.  Also removed NaN's that were reported when the window size was too large.
+
+2006-07-10  Kalpit Desai <kvdesai@email.unc.edu>
+	* msdbase.m: Fixed a typo and a bug in calculation of default Tau.
+
+2006-07-05  Kalpit Desai <kvdesai@email.unc.edu>
+	* msdbase.m: 
+	- Fixed nasty errors in the documentation and brought it up to date.
+	- Exposed the standard error results to the output.
+
+2006-06-20  Kalpit Desai <kvdesai@email.unc.edu>
+	* msdbase.m: Now puts five points (instead of 3) in each decade for default window vector.
+
+2006-06-05  Kalpit Desai <kvdesai@email.unc.edu>
+	* laser_msd.m: 
+	- Essentially rewrote the whole module. Now allows to look at diffusion along each axis (X,Y,Z) as well as in each plane (XY, YZ, ZX) independently.
+	- Output interface had to be changed to report 1D and 2D diffusion parameters
+	- Corrected documentation to reflect changes in the interface.
+	* msdbase.m: Added some comments
+
+2006-06-05  Jeremy Cribb <jcribb@email.unc.edu>
+	- ve.m: corrected documentation and added w to output structure.
+
+2006-05-19  Jeremy Cribb <jcribb@email.unc.edu>
+	- ve.m: fixed minor bug in determination of w.
+
+2006-05-16  Jeremy Cribb <jcribb@email.unc.edu>
+	- ve.m: added parameter to plot output in [Hz] or [rad/s].
+
+2006-04-24  Jeremy Cribb <jcribb@email.unc.edu>
+	- ve.m: minor changes to plot linestyle and output structure.
+
+2006-04-24  Jeremy Cribb <jcribb@email.unc.edu>
+	* rod_coord_corr.m: added.  beginning of a function that will analyze the correlation between coordinate axes for a diffusing rod (axial, normal, and radial).
+	* laser_msd.m: 
+			- file loading is now fixed to use latest load_laser_tracking.
+			- computation of mean and error in plot is now fixed.
+	* msd.m: added code to ignore window sizes that do not exist.
+	* ve.m: added code to ignore window sizes that do not exist.
+	
+2006-04-24  Jeremy Cribb <jcribb@email.unc.edu>
+	* ve.m: removed redundant legend entries.
+
+2006-04-13  Kalpit Desai <kvdesai@email.unc.edu>
+	* laser_msd.m:
+	- Fixed a typo, so now doesn't crash when no file argument is supplied
+	- Corrected the way data is loaded, compatible  to load_laser_tracking.
+	- Corrected the function signature in the documentations
+
+2006-04-04  Jeremy Cribb <jcribb@email.unc.edu>
+	* laser_msd.m: patch so that 'edited.mat' files from lt_analysis_GUI can be read.
+
+2006-03-05  Kalpit Desai <kvdesai@email.unc.edu>
+	* msdbase.m: Added. A script that computes msd from raw time vs position data.
+
+2006-02-03  Jeremy Cribb <jcribb@email.unc.edu>
+	* rod_msd.m: added frame_rate as a parameter for tracking datasets in the case we use confocal or other videos not of the pulnix type.
+
+2006-02-02  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: added frame_rate as a parameter for tracking datasets in the case we use confocal or other videos not of the pulnix type.
+
+2006-02-02  Jeremy Cribb <jcribb@email.unc.edu>
+	* batch_drift_br.m: removed. obsolete.
+	* batch_drift_fl.m: removed. obsolete.
+	* batch_find_diff_co.m: removed. obsolete.
+	* batch_load_video_tracking_br.m: removed. obsolete.
+	* batch_load_video_tracking_fl.m: removed. obsolete.
+	* batch_load_vrpn_tracking.m: removed. obsolete.
+	* batch_msd2pt.m: removed. obsolete.
+	* batch_msd_2d.m: removed. obsolete.
+	* batch_msd_2d_d.m: removed. obsolete.
+	* batch_msd_2d_n.m: removed. obsolete.
+	* batch_normal_br.m: removed. obsolete.
+	* batch_normal_fl.m: removed. obsolete.
+	* bdb.m: removed. obsolete.
+	* bdf.m: removed. obsolete.
+	* bnb.m: removed. obsolete.
+	* bnf.m: removed. obsolete.
+	* data_merge.m: removed. obsolete.
+	* data_merge_tube.m: removed. obsolete.
+	* drift_buster_multi.m: removed. obsolete.
+	* drift_buster_multi_a.m: removed. obsolete.
+	* find_diff_co.m: removed. obsolete.
+	* find_diff_co_all.m: removed. obsolete.
+	* find_diff_co_dis.m: removed. obsolete.
+	* load_video_tracking_dbh.m: removed. obsolete.
+	* make_pulnix_tifs_a.m: removed. obsolete.
+	* msd_1d.m: removed. obsolete.
+	* msd_2d.m: removed. obsolete.
+	* msd_3d.m: removed. obsolete.
+
+2006-01-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* laser_msd.m: added.  semi-stable function that computes mean-square displacement for laser-tracked particles.
+
+2006-01-26  Jeremy Cribb <jcribb@email.unc.edu>
+	* rod_ve.m: fixed transpose errors, added degrees of freedom variable, updated comments and documentation.
+	* rod_msd.m: removed debugging code, fixed transpose errors, changed particle counting.
+
+2006-01-21  Jeremy Cribb <jcribb@email.unc.edu>
+	* ve.m: used real component when plotting errorbars to avoid "plotting neg (imag) parts in log space" warning.
+	* rod_ve.m: same.
+
+2006-01-21  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: switched to use of "NaN" functions so that it is no longer required for all trackers to exist for all known time points for mean-square displacement and viscoelastic methods.  The standard error reported by the code is weighted by the number of existing datapoints for each window size rather than the global number of trackers for the entire input dataset.
+	* ve.m: same.
+	* rod_msd.m: same.
+	* rod_ve.m: Same.
+
+2006-01-17  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: added pixels-to-microns conversion factor to accomodate more than one objective/multiplier.
+
+2006-01-12  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: now writes the final MSD data structure to a tab-delimited file.
+	* rod_msd.m: same. also added recording of diffusion constants in the output structure.
+	* rod.ve.m: added comments.
+
+2005-12-08  Jeremy Cribb <jcribb@email.unc.edu>
+	* rod_msd.m: added. computes the mean square displacement vs. a time-window for a diffusing rod.
+	* rod_ve.m: added. computes complex modulus and viscosity for a diffusing rod, using output from rod_msd.m.
+
+2005-10-06  Jeremy Cribb <jcribb@email.unc.edu>
+	* ve.m: updated documentation.  added number of beads tracked to output.
+
+2005-10-05  Jeremy Cribb <jcribb@email.unc.edu>
+	* ve.m: rearranged output data structure such that each bead's data is stored in 'raw', the mean values in 'mean', and the standard error values in 'error'.
+
+2005-08-10  Jeremy Cribb <jcribb@email.unc.edu>
+	* ve.m: fixed a warning regarding the use of the variable 'gamma' which is also a function in matlab.
+
+2005-06-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: corrected documentation to read default filemask is '*.evt.mat'.
+
+2005-06-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: vectorized innermost for-loop so that msd runs more quickly.
+
+2005-06-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* msd.m: added.  Reimplemented algorithm for computing mean-square displacement as found in Mason's 2000 Rheol Acta paper.  Mostly done for better understanding of the algorithm, but placed here as it works cleanly with the new version of load_video_tracking.
+	* ve.m: added.  Uses output of msd.m to compute, output, and plot the viscoelastic moduli (as determined by mean-square displacement computation).
+
+2005-06-27  David Hill <dbhill@email.unc.edu>
+	* batch_msd_2d.m: changed to function from script.
+	* msd_2d.m: changed to function from script.
+
+2005-06-23  David Hill <dbhill@email.unc.edu>
+
+	* Change batch_load_video_tracking to be able to handle the 40x and 60x lenses
+
+2005-06-10  David Hill <dbhill@email.unc.edu>
+
+	* Changed msd2pt to be a funtion
+
+2005-06-10  David Hill <dbhill@email.unc.edu>
+
+	* Added batch_msd2pt to more quickly get thru 2pt rheology calculations
+
+2004-08-31  David Hill <dbhill@email.unc.edu>
+
+	* Initial Version of Mean Squared Displacement Code
+
+
+
+

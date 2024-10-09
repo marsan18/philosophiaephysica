@@ -1,0 +1,63 @@
+2013-02-18  Jeremy Cribb <jcribb@email.unc.edu>
+	* added cap_gui.
+
+2006-07-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* added varforcegui.
+
+2005-12-19	Kalpit Desai <kvdesai@email.unc.edu>
+	* Emptied the directory FreqSweepAnalysisGUI
+	* Added the files in another better named directory: lt_analysis_GUI
+
+2005-08-14  Jeremy Cribb <jcribb@email.unc.edu>
+	* added elt_GUI.
+  * added mainGUI.
+	
+2005-08-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* added video_forcecal_GUI.
+
+2005-08-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* added bioforceGUI.
+
+2005-08-13  Jeremy Cribb <jcribb@email.unc.edu>
+	* added lasertrap_forcecal_GUI.
+
+2005-08-10  Jeremy Cribb <jcribb@email.unc.edu>
+	* added laser_forcecal_GUI.
+
+2005-06-16  Jeremy Cribb <jcribb@email.unc.edu>
+	* removed fcd_GUI.  This was replaced a long time ago with evt_gui and never got removed from CVS.
+
+2005-04-06  Kalpit Desai <kvdesai@email.unc.edu>
+	* Added FreqSweepGUI. Useful for pulling a bead with high frequency sinusoids on magnets.
+ 
+2005-01-29  Jeremy Cribb <jcribb@email.unc.edu>
+	* Added evt_GUI.  Matlab GUI for editing video tracking files.
+
+2004-11-30  Jeremy Cribb <jcribb@email.unc.edu>
+	* Added init_timerfig.m, initializes a dialog box for displaying simple text.
+
+2004-10-23  Jeremy Cribb <jcribb@email.unc.edu>
+	* Added VE_fluid_model_GUI folder
+
+2004-10-22  Jeremy Cribb <jcribb@email.unc.edu>
+	* Added fcd_GUI folder.
+
+	* fcd_GUI.m:  contains matlab code for editing Force Calibration Data (FCD).  Initial Version
+	* fcd_GUI.fig:  defines the matlab GUI for editing Force Calibration Data.  Initial Version
+
+
+2004-09-01  Jeremy Cribb <jcribb@email.unc.edu>
+	* Modified poletipsmeasurer to output relevant variables to matlab workspace.  
+
+	* Made cosmetic changes to TrackerGUI.fig
+
+
+2004-06-07  Ben Wilde <wilde@cs.unc.edu>
+
+	* Added ForceCalculator to the GUI folder
+
+
+2004-05-18  Jeremy Cribb <jcribb@email.unc.edu>
+
+	* Initial Version
+

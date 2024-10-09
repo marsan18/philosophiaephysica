@@ -1,0 +1,23 @@
+
+function fname = tracking_check(filename_root)
+% finds a matching tracking file in the current directory
+    fname_array = [...
+        cellstr('.raw.vrpn.evt.mat')...
+        cellstr('.raw.vrpn.mat'),...
+        cellstr('.avi.vrpn.evt.mat'),...
+        cellstr('.avi.vrpn.mat'),...
+        cellstr('.vrpn.evt.mat'),...
+        cellstr('.vrpn.mat')...
+    ];
+        
+    for i=1:length(fname_array)
+        filen = strcat(filename_root, fname_array{i});
+        if exist(filen, 'file')
+            fname = filen;
+            return;
+        end
+    end
+    warning('Tracking file not found');
+    fname = 'NULL';
+    return;
+end

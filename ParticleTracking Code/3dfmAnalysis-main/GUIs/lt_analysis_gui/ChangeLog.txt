@@ -1,0 +1,293 @@
+2007-08-20 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_anlaysis_gui.m: Corrected the function name pwell() to potwell().
+
+2007-05-02 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_anlaysis_gui.m:
+	- Added a few modules for GPI analysis, computing diffusion coefficient etc.
+
+2007-03-05 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_anlaysis_gui.m:
+	- PSD plots in loglog scale not linearlized log
+	
+2006-11-23 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Allows to look at the data inside the box in full resolution. Useful to detect steps.
+	- Added button to hide/redisplay the box without deleting it.
+	- Clearer interface to box controls and better layout.
+
+2006-11-21 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Synching with the version on hydrogen-cs. Seems all are cosmetic changes making the plots of publication quality.
+
+2006-11-20 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui: Fixed the bug when UI occassionally forgot the default browsing path. Other minor changes.
+
+2006-11-13 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui: When told to, removes background drift before plotting 3D trace.
+2006-11-13 Kalpit Desai <kvdesai@email.unc.edu>
+	* fsanalysis_subgui.m: Old modifications. Seems this one also computes total response at 2nd and 4th harmonic.
+
+2006-09-29 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Added real-time cursor for sound playback.
+2006-08-25 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.fig: Added one more dimension 'XY' for looking at the motion in XY plane. Also changed the order of dimensions in the list box to a more intuitive one: x-y-z-xy-r
+	* lt_analysis_gui.m: Coding necessary for processing the motion in XY dimension, for each type of analysis.
+	* fsanalysis_subgui.fig: Added a button to load a passive diffusion data, if one wants to compensate for the diffusion energy also. Also added related checkbox.
+	* fsanalysis_subgui.m: Computation of frequency response now takes into account the diffusion energy, for both normalized and unnormalized case.
+
+2006-08-23 Kalpit Desai <kvdesai@email.unc.edu>
+	* fsanalysis_subgui.m:	Now supports analysis of data that was taken with control-frequency bursts interleaved between test-freqeuncy bursts.
+	- Normalizes the response at test-frequencies by the average response at the two adjucent control-frequency bursts.
+	- This control is required to account for the change in the position of the bead relative to poles. 
+	* fsanalysis_subgui.fig: Added a checkbox to let user specify if the control-frequency normalization is to be done.
+
+2006-07-10 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	msd plot axes are reset to loglog when done plotting.
+
+2006-07-05 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	
+	- Fixed the bug where gui forgot the default browsing path. 
+	
+2006-07-03 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	Now allows looking at 1D msd of individual dimension (x,y,z).
+
+2006-06-30 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	Now automatically exports results of msd to base workspace. Also plots msd on loglog scale instead of linearized log scale.
+	
+2006-06-22 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	
+	- Now handles the box modes appropriately when the main figure is closed and then reploted by user.
+	- Better handling of signal variety for time domain plot in stack mode.
+	- Fixed a bug whereby time domain plot for stack wouldn't update if the box was partially out of axes limits.
+
+2006-06-20 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	
+	- Fixed a bug in stack-box mode when selected signal was not of position type.
+
+2006-06-20 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	
+	- Fixed a bug in plotting uneven-timestamps flag line.
+	- Fixed a bug while switching from drag box mode to draw new box mode.
+
+2006-06-16 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	Several bug fixes in the newly added features.
+
+2006-06-16 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	
+	- Now plots a flag-line if & when the time stamps are unevenly spaced.
+	- Added a list of markers that can be looped through (in addition of colors) when overlaying several datasets.
+	- Now same tag for different file is allowed (after warning). 
+
+2006-06-15 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m, lt_analysis_gui.fig:	
+	- Fixed a bug while loading a file that is already loaded in the database.
+	- Now shows 'red' background while busy computing, so that user doesn't accidentally click everywhere.
+	- Fixed a typo where instead of disabling 'overlay mags' functionality, program enabled it causing a crash later on.
+
+2006-06-09 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:	
+	- Fixed a bug in plotting spectrogram in log scale. Also, default view is set back to looking down from top, since 3D view wasn't much helpful.
+	- Commented out the code for plotting energy vs time. Will add back after putting a checkbox in the advanced option window.
+	- Fixed the annoying delay that happened when trying to draw a new box when one box already exists. Now first deletes the old box before switching to 'drag box' mode.
+
+2006-06-09 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.fig:
+	- Added a button to let user clear the stack created using 'plot freq domain results for this box in the stack' button.
+	* lt_analysis_gui.m:
+	- Coding associated with 'clear stack' button
+	- Fixed a bug in stacking the frequency domain results as the user drags box, now actually works.
+	- Also plots a time-domain trace color coded to indicate position of each element of stack
+
+2006-06-08 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.fig:
+	- Added a button that allows user to compare frequency domain plots for different parts of the same file. Not tested.
+	- Added a checkbox that allows user to specify if the statistics of the data within box is to be recomputed
+	- Deleted 'Do Nothing' radio box.
+	* lt_analysis_gui.fig: 
+	- Coding necessary to facilitate the above mentioned changes.
+	- Now spectrogram is plotted as a surface (instead of colormap) and in log scale.
+	- Commented out overlaying of position data on spectrogram, doesn't go well with surface.
+	- Added a routine that computes and plots energy vs time. This may just be temporary.
+
+2006-06-06 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Now uses 'bone' colormap instead of 'gray' for spectrogram.
+	* lt_analysis_gui.fig: minor cosmetic changes.
+
+2006-06-06 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Now when told to do so, drift is subtracted out before frequency domain analysis is performed
+	- Now the spectrogram plot displays the dimension used, i.e. R/X/Y/Z
+	- Now magnet log (channel 8) is overlayed on the spectrogram
+	- Fixed a bug in overlaymags method that caused the magnet trace display to show up outside the axis limits
+
+2006-06-04 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.fig, lt_analysis_gui.m: 
+	- Added one more experiment type in the list, allows to load bead position and position error.
+	- Fixed a bug in annotating figure for position error signal.
+	- Fixed the disabled 'subtract drift' checkbox even when drift data was selected.
+
+2006-05-29 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.fig, lt_analysis_gui.m: Previous commit was wrong version, committing correct versions.
+2006-05-29 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.fig: Grouped 'spectrogram' and 'in box only' into a new subpanel for processing active file only.	
+	* lt_analysis_gui.m: Rewrote the computation and plotting of spectrogram so that it actually works now. 
+	- Also added overlay of time-domain trace on to the spectrogram itself.
+
+2006-05-18 Kalpit Desai <kvdesai@email.unc.edu>
+	* fsanalysis_subgui.m, fsanalysis_subgui.fig:
+	- fixed a bug in shifting the under-hood frequency window
+	- Now shows harmonic markers for excitation frequency, while looking underh the hood
+	- Added a menu that allows user to select the units of yaxis (e.g. Power, displacement, displacement*frequency etc).
+	- Coding necessary for providing choices for the units of Y axis
+	- Added option to view total harmonic distortion vs frequency
+	- Fixed a bug in parsing the input array for under-the-hood frequencies
+2006-05-18 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Fixed a bug where positionError field was ignored even when asked to be plotted.
+	* fsanalysis_subgui.m, fsanalysis_subgui.fig:
+	- Improved the speed of segment detection by ~300 times. Processing time is now within limits of patience.
+	- Added ability to 'look under the hood' for what happens while processing a small user-selectable list of frequencies. Plots raw psd.
+	- Now imports and puts legends on all the figures
+	- Now only processes for the dimensions which are selected in the lt_analysis_gui
+	- Added a "shifter" on GUI that conveniently shifts the 'look under the hood' frequency window.
+	- Improved speed of computation of frequency sweep response
+	- several other bug fixes.
+2006-05-17 Kalpit Desai <kvdesai@email.unc.edu>
+	* partial commit. Need to switch computer.
+2006-05-15 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m, lt_analysis_gui.fig:
+	- Added ability to invoke other guis from within lt_analysis_gui. Using this for recently developed frequency_sweep analysis GUI.
+	- Added a box on the GUI itself that displays useful information, e.g. guidelines for user, task being executed, status etc.
+	- Added a checkbox to let user specify if the stage position needs to be filtered or not, at the time of loading the file itself.
+	- Added ability to view spectrogram. (only one file at a time, no overlay). Useful to quickly diagnose frequency sweep data.
+	- Removed frequency response checkbox. A whole new sub-gui serves its purpose now.
+	- several other minor modifications here and there.
+
+	* fsanalysis_subgui.m, fsanalysis_subgui.fig:
+	- The subgui for frequency sweep analysis, that can be called from lt_analysis_gui.
+	- Works for the data analyzed so far.	 	
+
+2006-05-10 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: One step closer to analyzing frequency sweep data. Also couple of improvements in how removal and reloading of datasets is handled.
+
+2006-05-03 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:
+		- Added ability to attach frequency-sweep excitation data with tracker log. 
+		- Made some progress towards processing frequency sweep data, left incomplete.
+	* lt_analysis_gui.fig: Some cosmetic improvements and disambiguation.
+2006-04-28 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Turned off 'pretty_plot' command for main figure. According to profiler it was taking a long time to execute. Should came back to it and find out why.
+
+2006-04-21 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:
+	- Turned off filtering of stage. Untill this option is made accessible through GUI, filtering would have to be done manually. Automatic filtering seems to be a bad idea when tracking is lost and the originial file contains uneven time-stamps for a small span.
+
+2006-04-21 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:
+	- Sets and supplies correct flags to load new or edited files. Comaptible with load_laser_tracking 02.01
+2006-04-14 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:
+	- Offset in the .drift. field is now set to zero, so that dependent codes don't have to add it back manually while subtracting drift using 'polyval'. Related changes allover.
+
+2006-04-13 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:
+	- Fixed a bug so where 'magdata' field was left empty when there was no magnet data attached to it. Now defaults to zero.
+	- Does not automatically refresh the main figure window when switching to different files. Refreshing takes a while and gets annoying if not intended.
+
+2006-04-11 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m, lt_analysis_gui.fig: 
+	- Loads and saves files correctly
+	- Removes stage noise by default
+	- Fixed couple of bugs and typos in frequency processing.
+2006-03-27 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m, lt_analysis_gui.fig: 
+	- Added ability to save modified files as well as load thus saved files.
+2006-03-05 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m, lt_analysis_gui.fig: 
+	- Now doesn't refresh time-domain plots automatically when any setting is changed. Added a separate button for that.
+	- Incorporated msdbase code (soon to be committed) into gui.
+2006-01-28 Kalpit Desai <kvdsai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Now asks user for confirmation when a file in the 'to load list' is already loaded in the data base. Eliminates need of first removing the file and reloading it when changing the experiment type.
+	- Fixed a bug in plotting of multiples PSDs of lowbandwidth dat2
+	- Fixed a crash that happened when user 'cancelled' edits of tag.
+	- Now 'Cut' allows to select a point outside axis as the boundary. Useful when we want to remove all the data before or after certain time.
+	* lt_analysis_gui.fig: 'Overlay Ch 8' renamed to 'Overlay Mags'
+
+2006-01-27 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Now loglog plots are plotted taking log of the signal first and then plotting on linear axis.
+	
+2006-01-12 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Fixed several bugs with PSD computation and plotting
+	* lt_analysis_gui.fig: All fonts are now 8 points, this makes it look right on Tim's laptop. 
+
+2006-01-04 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Fixed the bug where program crashed while trying to 3d-plot empty data.
+	- Fixed the behaviour of dragging box after zoom
+	- Now prints the results on command line in addition of displaying it.
+
+2006-01-04 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Added ability to play sound for the data selected inside box
+	- Also plots a spectrogram of the signal while playing the sound.
+	* lt_analysis_gui.fig
+	- Added button for playing sound
+	- Added a frame, using to mask the controls when program is busy and needs to avoid accidental clicks.
+	
+2005-12-26 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Added a check for empty database in couple of places.
+
+2005-12-26 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Replaced the referenced fieldnames of the global database with absolute names, thus improving readability of the code and  speed of the program. Referencing was useful only while the absolute names were in experimental phase.
+	- Fixed a typo.
+
+2005-12-23 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Added back the ability to compute psd, compute 'accumulative displacement' and overlay the results for multiple files on a common plot. Enabled 'plot' button.
+	- Added checkbox to do frequency-domain analysis of the data selected in time-domain by drawing a box.
+	* lt_analysis_gui.fig: Same +
+	- Moved 'Add FS data' button into master database management panel.
+
+2005-12-22 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: Miscellaneous bug/typo fixes.
+
+2005-12-22 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m:
+	- Upgraded the whole program to exploit the new 'matrix output' feature of load_laser_tracking.
+	- corrected the positioning of overlayed magnets, so that they are reliably visible
+	- added 7th field in the global master database: 'drift' and removed the field: 'experType'
+	- Added  ability to select 'drift section' and then remove that drift from rest of the data
+	- Improved interface for drawing and dragging box, now using radios and buttonDownFcns
+	- Changed the 'cut' behavior to 'remove inside box' instead of 'remove outside box'
+	- Now in the 3D plot the data inside box has different color than data outside box.
+	- Several miscellaneous fixes of typos and bugs.
+	* lt_anlaysis_gui.fig: same
+
+2005-12-20 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: 
+	- Added  3d plotting ability
+	- Added ability to overlay channel 8 (wire from magnet DAC) onto position traces.
+	- Added calculation and display of raw peak to peak measurement inside box.
+	- Improved default positioning of 'results' window
+	- Fixed a typo in the calcualtion of radial displacement.
+	* lt_anlaysis_gui.fig: same
+2005-12-19 Kalpit Desai <kvdesai@email.unc.edu>
+	* lt_analysis_gui.m: The new and more appropriate name for the old file FreqSweepAnalysis.m. 
+	- Competely renovated, now targetted for interactive analysis of a much broader range of experiments. 
+	- Frequency Sweep analysis is still disabled.
+	* lt_analysis_gui.fig: same.
+2005-11-30 Kalpit Desai <kvdesai@email.unc.edu>
+	* FreqSweepAnalysis.m, freqSweepAnalysis.fig: Several new features e.g. plotting 3d trace, XYZ time series etc.
+2005-11-15 Kalpit Desai <kvdesai@email.unc.edu>
+	* FreqSweepAnalysis.m: Several new features e.g. calculating and ploting cumulative displacement upto certain frequency, plotting for stage etc. 
+	* FreqSweepAnalysis.fig: Couple of relevant checkboxes
+
+2005-10-18 Kalpit Desai <kvdesai@email.unc.edu>
+	* FreqSweepAnalysis.m: Now in finely working condition for passive data.
+	* FreqSweepAnalysis.fig: Couple of other buttons and fixes.
+	
+2005-10-17 Kalpit Desai <kvdesai@email.unc.edu>
+	* ChangeLog.txt: First entry.
+	* FreqSweepAnalysis.fig: A GUI for analyzing frequency sweep data. Only passive data for now.
+	* FreqSweepAnalysis.m: A matlab file that goes with it.
