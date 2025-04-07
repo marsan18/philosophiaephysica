@@ -1,0 +1,155 @@
+\maketitle
+\newpage
+\section{Principles of Remote Focusing}
+\subsection{Introduction}
+Remote focusing is, in general, a way to optically translate the focal plane of an objective without directly moving it. While there are other approaches to remote focusing {CITE WILSON}, in our lab we use variable dioptric power lenses or conjugate to the objective's back focal plane to change the position of a plane along the optical axis without physically translating it. This allows for such as electronically adjusting the focal plane large distances within miliseconds, which has exciting applications in biological imaging. Introducing minimal aberration and magnification, it is an exciting tool in microscopy, where it allows fast, automated three dimensional imaging when implemented in the detection pathway of a microscope. In our lab, we also use remote focusing in the excitation light-path to dynamically control the focal plane of our illumination beam, enabling advanced fluorescent microscopy techniques such as TIRF and HIST. To understand why focusing works, I follow the derivation of remote focusing from a Fourier Optics perspective \footnote{Section 1.2 follows the derivation performed in by Zuo et al in [CITE].} and a geometric optical perspective \footnote{Section 1.3 follows the derivation performed by Qu and Hu [CITE].}. 
+\subsection{Remote Focusing and Transport-of-Intensity Fourier Optics}
+We assume our system is telemetric, which guarantees that refocusing avoids the introduction of additional phase-curvature across the field of view. This would result in the addition of variable magnification over the field of view and z-stack. This is crucial, as otherwise data processing would be unduly arduous and Under this assumption, we can model the propagation of the wavefunction $u_0$ modified by the free space transfer function $H$ as follows. 
+
+\begin{equation}
+	u_{\Delta z}(x,y) = \mathcal{F}^{-1}\left[ \mathcal{F}(u_0(x,y))H_{\Delta z}(u,v)\right]
+\end{equation}
+In brackets, we see that we have taken the Fourier transform of the wave to find its corresponding frequency-space function, and then modify with the transfer function. In the paraxial approximation, the free space transfer function is known to be
+\begin{gather}
+	H_{\Delta z}(u,\nu) = \exp\left[-i \pi \lambda \Delta z (u^2 + \nu^2)\right].
+\end{gather}
+\par Replicating the phase modification of free space via a spatial light modulator (SLM) represents the angular spectrum method and is widely used in holographic reconstruction due to its ability to produce an image field which does not vary in size along the optical axis. However, there are many practical difficulties of working with an SLM, we instead utilize a electronically tunable lens (ETL). In Fourier optics, in the paraxial approximation a lens produces a transfer function of the form (CITE Goodman eq. 5-10)
+\begin{gather}
+	t_l(x,y) =\exp \left[ - i \frac{k}{2f}\left(x^2 + y^2\right)\right].
+\end{gather}
+Since our ETL is in the spatial coordinates of the Fourier plane of the 4f system, it has a transfer function
+\begin{gather}
+	t_l(\xi, \eta) = \exp\left[ \frac{-i \pi}{\lambda f_c}\left(\xi^2 + \eta^2\right)\right].
+\end{gather}
+Notice that equation 4 is similar in form to the free space transfer function given in equation (2); by selecting a specific combined focal length $f_c$, we can do the equivalent of propogating the wave through free space some distance $\Delta z$. In our case, we use only a stand-alone ETL rather than a combined system, so $f_c = f_e.$. Converting from  spatial to frequency coordinates in the Fourier plane,  we can compare it to our known free space transfer function $H_{\Delta z}$ above and solve for axial translation.
+\begin{gather} 
+		H_{\Delta z}(u,\nu)=t_l(\xi, \eta) \\
+		 \exp\left[-i \pi \lambda \Delta z (u^2 + \nu^2)\right] = \exp\left[ \frac{-i \pi}{\lambda f_e}\left((\lambda f u)^2 + (\lambda f \nu)^2\right)\right]\\
+		%redundant! \lambda \Delta z (u^2 + \nu^2) = \frac{\lambda f^2}{f_e}(u^2+\nu^2)\\
+		\Delta z = \frac{f^2}{f_e}
+\end{gather}
+
+
+\subsection{Using Ray Optics to find Axial Scanning Range}
+\textbf{Cite Qu, Hu!} When centered at the focal plane of two relay lenses rather than at the back focal plane, ETL3 also causes minor demagnification at high dioptric power. To see why this is, we turn to another paper which analyzes the impact of a remote focusing objective in the detection pathway in more detail. We begin with the thin lens equation
+\begin{gather}
+	\frac{1}{I} + \frac{1}{I'} = \frac 1 f
+\end{gather}
+for $f_O'$ is the focal length of the objective, $I$ is the distance between the object and the objective and $I'$ is the distance between the objective and the image. Now let us assume that we have an ETL at the back focal plane of our objective. This ETL produces an axial translation of the focal plane $\Delta z$. This means we may now write a system of two thin lens equations to model the light going from the object plane, through the objective, to the BFP where the ETL is, and then to the imaging plane.
+\begin{gather}
+	\frac{1}{I-\Delta z} + \frac{1}{I_1'}  = \frac 1{f}\\
+	\frac{1}{f -I_1'}+\frac{1}{I_2'} = \frac{1}{f_e'}
+\end{gather}
+The first thin lens equation models the system from the new object plane, which has been shifted by $\Delta z$ from the old object plane via remote focusing by the ETL, through the objective, and to the image after the objective at a distance of $I_1'$. The second thin lens equation models the system from the image after the objective through the ETL of variable focal length $f_e$ and to the second image after the ETL at a distance of $I_2'$. Due to the configuration of our system, the distance between the image after the objective and the objective is equal to the distance from the objective to the ETL at the back focal plane, which is the focal length, and the distance from ETL2 to the image after ETL2 where the camera is placed, so that
+\begin{gather}
+	I' = I_2' + f_O'.
+\end{gather}
+Now, we solve this system of equations 8-11 via MATLAB to find $\Delta z$.
+\begin{gather}
+	\Delta z = \frac{f^2}{f_e'}
+\end{gather}
+This result is similar to the result we got above, but here our objective is in the back focal plane of the system and $f$ is the objective's focal length, which is related to the magnification of our system. 
+\par Let us pivot to considering a 4F system with two relay lenses and an ETL in the plane conjugate to the back focal plane. In our system, ETL2 and ETL3 are at the focal plane of two relay lenses conjugate to the back focal plane rather than in the back focal plane itself, so this will model a system analogous to ours. In this case, we get a thin lens equations describing the transition from object through the objective to the image and from the intermediate image through the ETL to the detector
+\begin{gather}
+	\frac{1}{I-\Delta z}+\frac 1{I_1'} = \frac 1{f}\\
+	\frac{1}{I' + f_r' - I_1'}+\frac1{I_2'} = \frac{1}{f_r'}
+\end{gather}
+%cite
+where we maintain the same variable convention and introduce $I_2'$ is the distance between the image after the first relay lens and the relay lens and $f_r'$ is the focal length of the relay lenses. In this system, the ETL is a distance $d_1$ from the relay lens, we get
+ \begin{equation}
+	d_1 = I_2' + f_e'.
+\end{equation}
+The distance from the relay lens to the ETL is given by % cite
+\begin{gather}
+	d_1 = f_r' + \frac{f_2'^2}{M_0f}.
+\end{gather}
+Using MATLAB, we solve for $\Delta z$
+\begin{gather}
+	\Delta z = %\frac{(f_r' - I)^2}{f_e'^2 f^2}= 
+	\frac{f_r'^2}{M_0^2 f_e'}
+\end{gather}
+where $M_0 = (f_O'-I)/f_O'$ is the magnification of our system. We must also account for the fact that in our system, our ETLs are always in air ($n\approx 1$) while the objective is in an immersion media with some index $n$. We must adjust our formula[CITE Huskien et al.] to accommodate this, granting\par
+\begin{gather}
+	\Delta z = \frac{nf_r'^2}{M_0^2 f_e'}
+\end{gather}
+While this configuration much less axial range than the back focal plane setup, but it offers key advantages. Theoretically, the dioptric power of the ETL does not affect the magnification of the system in either the back focal plane or conjugate to the back focal plane. In practice it does however, and also causes spatial distortions in the image real world conditions. These are very manageable in the relay lens setup, especially for low dioptric power. [CITE qu hu and bio guy] Furthermore, the relay lens setup allows us to use two relay lenses in a fluorescent light microscopy setup, with one to translate the excitation pathway and the other to translate the emission pathway.
+\section{Calibration}
+\subsection{Introduction to VIEW-MOD Optical System}
+\par Our optical system[CITE VIEW-MOD] (see Figure 1) is designed for light sheet fluorescence microscopy, and has two paths which diverge at the dichroic mirror of a filter cube just after a shared objective. 
+In our system, one remote focusing lens, ETL2, is responsible for remote focusing in the illumination light path, while the other remote focusing lens, ETL3, is responsible for focusing in the detection light path. In our field of research, it is important to be able to translate the focal plane of the light sheet by a set amount using ETL2, while ETL3 must be able to move the imaging plane to the same location.  In order to use these devices as designed, we must therefore create a look up-table for each ETL, tying applied current to optical axis translation $\Delta z$.
+% NOT NEEDED: In the case of the illumination path, we will measure the beam waist of a light sheet in the focal plane, then define the Rayleigh length of the light sheet.
+\par
+% OUT OF PLACE:
+% Approximating the lightsheet as Gausssian in its thin direction, we will then use this information to translate the sample stage upwards in known increments, using the illumination ETL to keep it focused on the sample slide. I also wish to quantify the minimum beam waist of the light sheet at various optical displacements and compare it to the Abbe Diffraction limit and the Gaussian diffreaction limits, as this is of interest to our experimental design for this system.\\
+In theory, both the remote focusing ETLs follow equation 17. Since we have $f=125mm$ relay lenses, we get a predicted axial transfer range of $\Delta z=\frac{15625mm^2}{M^2 f_{ETL}}$. We use ETLs with a diopric range of [-10, 10] giving a predicted range $\Delta z = [-156.25, 156.25]mm/M^2$. This predicts a range of $\pm 391\mu m$ for a 20X objective and $\pm 43.4 \mu m$ for a 60X objective. However, we may control only current applied to the ETL, which controls dioptric power. Dioptric power is dependent on both current and temperature, which in turn is itself dependent on current. The non-ideal behavior of the ETL compounds with the non-ideal behavior of optics so that in practice, experimental behavior differ significantly theoretical predictions. To ensure accurate axial control, we calibrate our ETLs under experimental conditions.\par
+
+Going forward, it will be important to differentiate between the excitation focal plane, the sample plane, and the detection focal plane. The \textit{excitation} focal plane is the plane in which the beam waist lies, and is translated via altering the dioptric power of ETL2 or physically moving the objective. The sample plane is the physical location of the sample's surface, and is static for any given experiment. The \textit{detection} focal plane is the plane which is imaged on the CCD, and is translated via altering the dioptric power of ETL3 or physically moving the objective.
+
+\subsection{ETL2 Calibration}
+\par ETL2 is in the excitation pathway of Hestia. Using either a spot or light sheet, we will first focus the excitation beam into the sample plane via objective height adjustment and ETL2. We use a slide coated generously with fluorescent 200nm beads as our sample.
+\par We will use $\mu$Manager to move the microscope objective upwards in the Z direction in known discrete steps. We then bring this image into focus in the camera via ETL3 to adjust for the objective displacement and refocus the image. We then minimize the width of a Gaussian light-sheet by using ETL2 to translate the excitation focal plane back into the sample plane. Because we are compensating for a known displacement of the objective via ETL2, we can link the current value of ETL to focal-plane translation. Taking many of these steps allows us to map the relationship between ETL2 current and $\Delta z_{ex}$.
+\subsection{ETL3 Calibration}
+ETL3 is in the detection plane of the microscope. To calibrate it, we follow much the same procedure we did for ETL2, but rather than involving the excitation pathway we simplify things using the built-in transmission illumination lamp and a calibration grid. We translate the objective by a known step, then compensating for the output with ETL3, moving the detection focal plane back into the sample plane and recording the current necessary to do so. In this way we can create a map of the relationship between ETL3 current and $\Delta z_{em}$.
+% Below, paste the light sheet computations! But first, update them for the correct effective NA.
+\subsection{Light-Sheet Characterization}
+In this experiment, we use our ETLs to decouple the emission and excitation focal planes and use this image and characterize the profile of a light sheet. First, we use ETL2 to focus the light sheet in the sample plane, where we again use a slide with 200nm beads for our sample. Then we displace the objective by known increments, translating both the emission and excitation focal planes by $\Delta z$ . Then we beads back into focus using ETL3, moving the emission focal plane back into the sample plane. We then image the beam at some distance from its beam waist $\delta Z.$ After doing this for a variety of objective displacements, we analyze the images to determine the beam waist as a function of axial displacement, $\omega(z)$. \par
+We make several predictions about the light sheet.
+\section{Results}
+\subsection{ETL1}
+\subsection{ETL2}
+\subsection{Light Sheet Characterization} %duplicated from longer write up
+Note the primary source for this work is Fiolka's Lightsheet literature review. The beam waist in a LSFM system is given by {CITE FIOLKA LS REVIEW} 
+\begin{gather}
+    \omega_0 \approx \frac{0.85 \lambda}{2 NA}
+\end{gather}
+    Where NA is the NA of the illumination objective and $\lambda$ is the excitation wavelength. The lateral beam radius is given by 
+    \begin{gather}
+        \omega(x) = \omega_0 \sqrt{1 + \left(\frac{x}{x_R}\right)^2}\\
+        x_R = \frac{n \pi \omega_0^2}{\lambda}
+    \end{gather}
+    where $x_R$ is the Rayleigh length in the lateral direction.
+    In the y-direction, the beam is essentially of infinite width and thus limitless depth of focus, as this is the broad side of the sheet. The only limitation here is the optical train componenets.\\
+    The lateral resolution of LSFM (i.e. in the x-y plane direction) is defined by 
+    \begin{gather}
+        \Delta r = \frac{\lambda_{em}}{2 NA_{det}}
+    \end{gather}
+    for the emission and detection wavelengths. This is because this is the FWHM radius of the beam, which is the point at which two airy disks would reach thier first trough and be distinguishable.\\
+    The axial resolution is given by the product of the illumination and detection point spread function, which in turn depend on the excitation and emission wavelengths adn the NA of the objective (which in our case is combined). In general, thinner light-sheets are generated by higher NA objectives with higher axial resoltuion but also have narrower Rayleigh lenghts and thus worse field of view. In other words, it is messy, but can be approximated (assuming $NA_{exc}=NA_{ill}$) by
+    \begin{gather}
+        \Delta z \approx \left( \frac{2 NA_{ill}}{\lambda_exc} + \frac{n (1-\cos \theta)}{\lambda_em}\right)^{-1}
+    \end{gather}
+    where $\theta$ is the half-angle of the detection objective
+    \begin{gather}
+        \theta = \arcsin\left(\frac{NA}{n}\right)
+    \end{gather}
+    Now, we must compute the ideal beam width and compare this with our own findings. For our TIRF objective, which has an NA of and 561nm laser light,
+    \begin{gather}
+        \omega_0 \approx \frac{0.85\cdot561nm}{2*(1.5)}\\
+        \omega_0 \approx 158.95nm
+    \end{gather}
+A beam simulator [CITE] verifies this result.
+\newpage 
+\section{Junk!}
+In our 4F setup, we use optical lenses are the relay lenses of our 4F system, which have $f = 125mm$. Plugging this into equation 8 and 10, in a system without magnification we get $\Delta z = \frac{15625 mm^2}{f_{ETL}}.$ Our ETL (Optotune 10-40) has an effective focal power range of -10 to 10 diopters. Dioptric power is given by $f_{ETL} = \frac{1m}{D}$ and therefore for us ranges from $f_{ETL} = (-\infty, -10]\cup [100, \infty)$ millimeters. This gives us a z-translation range of
+\begin{gather}
+	\Delta z = [-156.25, 156.25]mm.
+\end{gather}
+% REMOVE ME
+% Note that this change in our focal plane $\Delta z$ is defined in the magnified object field, which means that this is only valid for a non-zero magnification objective. The axial focal shift in the object-plane is given by
+\begin{gather}
+	\frac{\Delta z}{M^2},
+\end{gather} 
+so for a 60X objective we get $\Delta f = [-43.4, 43.4] \mu m$. Likewise, for a 40X objective, we get $[-97.7, 97.7] \mu m$, and for a 20X objective, we get $[-391, 391 \mu m]$. Whg % Note that we also have a 125mm lens going into a 200mm tube lens, which gives an effective magnification of 8/5. I'm not quite sure what to do with this.\\
+
+Note that the authors of {HIGH SPEED TRANSPORT CITE} give
+\begin{gather}
+	f_e = \frac{f_{ETL}f_{OL}}{f_{ETL}+f_{OL}-d}
+\end{gather}
+ Specifically, the light passes through a flat pane of glass before hitting the ETL, so the focal length of our optical lens goes to infinity. Since the optical lens focal length blows up to infinity, it dominates the denominator and cancels with itself in the numerator so that
+\begin{gather}
+	 \lim_{f_{OL} \to \infty} f_c = f_{ETL}
+\end{gather}
+which simplifies our calculations significantly. But we have yet to account for the magnification of our system, which we do below.
+%In practice, however, I predict that the ETLs will have slightly different properties, since ETL2 occurs \textit{before} the objective in the illumination light path, while ETL3 occurs \textit{after} the objective in the detection light path. Theoretically, this shouldn't matter much, but with imperfect alignment and non-ideal optics, I predict there will be small differences in thier behavior. Furthermore, based on the literature, I predict that the lenses will behave worse at high dioptric power, and that high ETL3 dioptric power will cause minor image demagnification.
+% CITE Grewe, B.F., et al., Fast two-layer two-photon imaging of neuronal cell populations using an electrically tunable lens. Biomed Opt Express, 2011. 2(7): p. 2035-46.
+\newpage

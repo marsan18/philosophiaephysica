@@ -1,0 +1,55 @@
+\section{Gaussian Approximation of the Beam Waist}
+Recall that previously, we used two diameters and the Gaussian power transmission through an aperture to find (in both cases) what our predicted beam width is $W_0=4.00mm$. Now, given an infinity-focused beam (i.e. Rayleigh length $>>1$) of a given width, we should be able to compute the new beam waist at the focal plane after it has passed through a lens using the following equation (Fundamentals of Photonics, 2nd ed., 3.2-13)
+\begin{gather}
+    W_0'= \frac{W_0}{\sqrt{1+(z_0/f)^2}}\\
+    z' = \frac{f}{1+(f/z_0)^2}
+\end{gather}
+Note in our case, the Rayleigh length of the Gaussian laser beam $z_0>>1$, so we can instead use 3.2-17 to see
+\begin{gather}
+    2W_0' \approx \frac 4 \pi \lambda F_\#\\
+    2W_0' \approx \frac 4 \pi \lambda \frac f D\\
+    2W_0' \approx \frac 4 \pi \lambda \frac f {\diameter_{BFP}}
+\end{gather}
+I'm not certain what to implement for the excitation beam waist at the BFP. Our beam waist throughout the optical system is 
+At the focal plane of the 125mm lenses, we have
+\begin{gather}
+    2W_0' \approx \frac 4 \pi \lambda \frac{125mm}{2(4mm)}\\
+    2W_0' \approx 20 \lambda\\
+    2W_0' = 22.3 \mu m
+\end{gather}
+for 561nm light. This would be easy to test via implementing a pinhole and checking to see if the power percentage transferred through the aperture is consistent with anticipated power transmission through a pinhole.\\
+For for a 60X TIRF objective with a 200mm tube lens, we can do the Focal Length by doing $F_{TL}/M = 200mm/60 = 3.33mm$ so lets just go with 3.3mm. So we have something like this:
+\begin{gather}
+    2W_0' \approx \frac 4 \pi \lambda \frac{3.33mm}{2(4mm)}\\
+    2W_0' \approx .297 \mu m
+\end{gather}
+Note that with a different formulation
+\begin{gather}
+    W_0' = \frac{f \lambda }{\pi W_0} 
+    W_0' = \frac{3.33mm*561nm}{\pi 4mm}
+    W_0' = 148.7 nm
+\end{gather}
+so we are being consistent at least. This seems unreasonably small, so that either our effective beam waist is far too large or something else odd is going on. \\
+
+Note we have another possibility: using the Abbe diffraction limit as done above.
+\begin{gather}
+    \omega_0 \approx \frac{0.85 \lambda}{2 NA_{eff}}
+    \omega_0 \approx 165nm
+\end{gather}
+This is a bit wider than we anticipated, but not as wide as we may have hoped. But here we have assumed that $NA_{eff} \approx NA_{theoretical}$ which may not be true. We need to find a more reasonable NA value. But how may we do this? I think one way is to shine a point in the BFP and see what comes out (angle wise). I think another is to assume that the LS is as wide as the effective NA allows it to be and see how that turns out. (Although this assumes a lot about the light sheet being effectively 1 point thick at the BFP.)
+$NA = n\sin(\theta)$ so if we find the length of the LS we can figure out the effective NA. A quick gut check shows that we go between 10-105um for the LS height, so around 95 microns across. This gives an effective angle (arctan(a) = 47.5um/3.33mm)
+
+
+
+Note, however, that this is the $W_0$ which is defined as the point where the intensity of the beam has fallen to $1/e^2$ of its maximum. Lets convert to $W_{FWHM}$ to make things simpler. We know that for Gaussian Beams, $W_0=0.843218*FWHM$, so $FWHM = .176\mu m$.
+Its necessary to point out that Chad claims (and I'm sure he is correct) that \textbf{Gaussian Optics does not hold for objectives}. He does some rather complicated math to attain:
+\begin{gather}
+    FWHM_A=4.81 \mu m\\
+    FWHM_L = 771nm
+\end{gather}
+for a Gaussian lightsheet in the axial and lateral directions respectively.
+Chad sites the following in his computations (see p41 of his thesis).
+    Wolf, E., Electromagnetic Diffraction in Optical Systems .1. An Integral Representation of the Image Field. Proceedings of the Royal Society of London Series a-Mathematical and Physical Sciences, 1959. 253(1274): p. 349-357.
+203. Richards, B. and E. Wolf, Electromagnetic Diffraction in Optical Systems .2. Structure of the Image Field in an Aplanatic System. Proceedings of the Royal Society of London Series a-Mathematical and Physical Sciences, 1959. 253(1274): p. 358-379.
+204. Chon, H.S., et al., Dependence of transverse and longitudinal resolutions on incident Gaussian beam widths in the illumination part of optical scanning microscopy. J Opt Soc Am A Opt Image Sci Vis, 2007. 24(1): p. 60-7.
+

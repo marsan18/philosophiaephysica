@@ -1,0 +1,105 @@
+%% Simulated bead diffusion
+function Composto_Particle_Simulator(fps,RootFolder, duration, SNR, particleSize, repeats, SeedNum, PixelSize)
+    % This function just automates use of video_sim to a certain degree.
+    % NOTE: Many values should be changed manually and are not accessible
+    % via function.
+    % ParticleSize, repeats
+    % SNR input should be a matrix of what SNRs you want to simulate.
+    % Defaults to 10 if unspecified.
+    % particleSize gives radius of simulated particles a in meters.
+    % Defaults to 1um if unspecified.
+    % Repeats just creates duplicates. Defaults to 1 if unspecified.
+    arguments
+        fps {double}
+        RootFolder {isfolder}
+        duration {double} = 10
+        SNR double {mustBeNumeric} = 100
+        particleSize double {mustBeNumeric} = 0.5*10^-6 %defaults to 1um
+        repeats double {mustBeInteger} = 1 % defaults to 1 repition
+        SeedNum {isinteger} = -1
+        PixelSize {isscalar}= 0.06545; % Defaults to water objective pixel size
+    end
+    % in_struct = param_check(in_struct);
+    % logentry('All parameters set');
+    %     numpaths     = in_struct.numpaths;
+    %     bead_radius  = in_struct.bead_radius;    % [m]
+    %     frame_rate   = in_struct.frame_rate;     % [frames/sec]
+    %     duration     = in_struct.duration;       % [sec]
+    %     field_width  = in_struct.field_width;    % [pixels]
+    %     field_height = in_struct.field_height;   % [pixels]
+    %     calib_um     = in_struct.calib_um;       % [um/pixel]
+    %     scale        = in_struct.scale;          % [scaling factor]
+    %     intensity    = in_struct.intensity;      % [max intensity of image]
+    %     background   = in_struct.background;     % [mean intensity, image matrix, or filename]
+    %     SNR          = in_struct.SNR;
+    %     seed         = in_struct.seed;           %  #ok<NASGU>
+    %     viscosity    = in_struct.viscosity;      % [Pa s]
+    %     tempK        = in_struct.tempK;          % [K]
+    %     xdrift_vel   = in_struct.xdrift_vel;     % [m/frame]
+    %     ydrift_vel   = in_struct.ydrift_vel;     % [m/frame]
+    %     rad_confined = in_struct.rad_confined;   % [m]
+    %     alpha        = in_struct.alpha;          % slope of loglog(MSD) plot
+    %     modulus      = in_struct.modulus;        % [Pa]
+    
+    % close all
+    % clear all
+    % clc
+    
+    % k=input('How many videos would you like?');
+    % k=int16(k);
+    % if isinteger(k) && k<=100 && k>0
+    %     fprintf("Input Accepted")
+    % else
+    %     error("Please input an integer from 1 to 100")
+    % end
+    
+    % Vary SNR
+    
+    ins.numpaths = 16;
+    ins.frame_rate = fps; %10 ms exposures
+    ins.duration = duration; % seconds
+    ins.field_width = 1024;
+    ins.field_height = 1024;
+    ins.calib_um = PixelSize; % same as water objective
+    ins.scale = 1;
+    ins.intensity = 235;
+    ins.background = 1;
+    ins.SNR = SNR;
+    
+    % in_struct.rad_confined = 2*10^-6;   % [m] %BROKEN
+    
+    ins.tempK = 273+23;
+    ins.xdrift_vel = 0;
+    ins.ydrift_vel = 0;
+    
+    % Elastic solid
+    ins.viscosity = 0.001;
+    ins.modulus = 0;
+    grid='y';
+    
+    for l = 1:repeats % This simply loops the whole function
+        for m=1:length(particleSize)
+            for n=SNR
+                ins.SNR = n;
+                if SeedNum==-1
+                    seednum = randi(100000);
+                else
+                    seednum=SeedNum-1+l; % must increase to avoid duplication
+                end
+                 ins.bead_radius = particleSize(m);
+                ins.seed=seednum; 
+                counter=1;
+                DestinationFolder= strcat(RootFolder, '/Seed ', int2str(seednum), '_SNR_', int2str(n), '_a_', int2str(particleSize(m)),int2str(counter));
+                if isfolder(DestinationFolder)
+                    counter = counter+1;
+                    DestinationFolder= strcat(RootFolder, '/Seed ', int2str(seednum), '_SNR_', int2str(n), '_a_', int2str(particleSize(m)),int2str(counter));
+                end
+                mkdir(DestinationFolder)
+                cd(DestinationFolder)
+                video_sim(ins, grid)
+                waitbar(n/length(SNR), string([string(n), " of ", string(SNR)]))
+            end
+        end
+    end
+% save("ins.mat", ins, '-mat')
+end

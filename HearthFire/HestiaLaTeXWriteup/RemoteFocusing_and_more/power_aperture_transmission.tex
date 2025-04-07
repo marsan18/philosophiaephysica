@@ -1,0 +1,74 @@
+\newpage
+\section{Gaussian Beam Power Transmission Through an Aperture}
+\fbox{\begin{minipage}{\textwidth}
+\textbf{Summary\\ For a Gaussian Laser beam, the power of a beam transmitted through an aperture $P_R$ is dependent on beam waist $w(z)$, the radius of the aperture $R$, and the total power of the beam $P_0$ as follows:}
+\setcounter{equation}{0}
+\begin{equation}
+    P_R = P_0 \left[1-\exp{\left(\frac{-2R^2}{w(z)^2}\right)}\right]
+\end{equation}
+\end{minipage}}
+The function given above may be derived from a Gaussian function as follows. (It may also be verified by digging through the Wikipedia page on Gaussian beams. See https://en.wikipedia.org/wiki/Gaussian\_beam\\\#Power\_and\_intensity.) A generic 2D Gaussian, such as a Gaussian laser's intensity distribution, is given by 
+\begin{gather}
+    f(x,y) = e^{-x^2 - y^2}.
+\end{gather}
+More generally, it may be written as 
+\begin{equation}
+    f(x,y) = A \exp \left[-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma^2_y} \right)\right]
+\end{equation}
+In the case of a laser, let us a assume that the beam is radially symmetric and centered about the origin. Then we may write:
+\begin{gather}
+    f(x,y) = A \exp \left[-\left(\frac{x^2+y^2}{2\sigma^2}\right)\right]
+\end{gather}
+Lets integrate this from negative infinity to infinity to find the total power of the laser.
+\begin{gather}
+    P= A \int^\infty_{-\infty} \int^\infty_{-\infty} A \exp \left[-\left(\frac{x^2+y^2}{2\sigma^2}\right)\right] dx dy\\
+    P = A \int^{2\pi}_{0} \int^{\infty}_{0} \exp \left[-\left(\frac{r^2}{2\sigma^2}\right)\right] d\theta \, r dr\\
+    P = 2\pi A \int^{\infty}_{0} \exp \left[-\left(\frac{r^2}{2\sigma^2}\right)\right] \, r dr
+\end{gather}
+More generally, we can find the power of the laser passing through an aperture of radius $R$ by integrating from 0 to $R$.
+\begin{gather}
+       P = 2\pi A \int^{R}_{0} \exp \left[-\left(\frac{r^2}{2\sigma^2}\right)\right] \, r dr
+\end{gather}
+This integral may be solved without too much fuss via complex analysis, but for the sake of convenience I use the identity given by equation 3.321.4 in \textit{A Table of Integrals, Series, and Products, 8th Edition} by Daniel Zwilliger:
+\begin{gather}
+    \int^b_0 r e^{-ar^2} dr = \frac{1-\exp\left(-a^2b^2\right)}{2a}.
+\end{gather}
+Using this identity, we see that
+\begin{gather}
+    P_R = 2\pi A \sigma^2 \left[ 1-\exp(-\frac{R^2}{2\sigma^2})\right]\\
+    P_{full} = \lim_{x\to\infty} P_R  = 2\pi A \sigma^2 [1]
+\end{gather}
+In defining this, we have assumed that the intensity profile, rather than the full power, is fixed. This isn't really useful to a fixed-power laser application: we want to find percentage of set power which passes through a certain radius. We therefore substitute the expression for full power into the expression for relative power.
+\begin{gather}
+     P_R = P_{full} \left[ 1-\exp\left(-\frac{R^2}{2\sigma^2}\right)\right]
+\end{gather}
+By convention, it is useful to talk about beam waist $w$, which is a diameter rather than the standard deviation we used, which is a radial measurement. Using $w=2\sigma$, we see that
+\begin{gather}
+    P_R = P_{full} \left[ 1-\exp\left(-\frac{2R^2}{w^2(z)}\right)\right].
+\end{gather}
+$\mathcal{Q}.\mathcal{E}.\mathcal{D}.$\\
+Let us assume our infinity-focused Gaussian laser beam has a Rayleigh length much longer than the optical path of our system, so that $w(z)\approx W_0$. Then we can find the beam waist of our laser to be
+\begin{gather}
+    1-\frac{P_R}{P_0} = \exp{\frac{-2R^2}{W_0^2}}\\
+    \ln{\left( 1-\frac{P_R}{P_0}\right)}=\frac{-2R^2}{W_0^2}\\
+    W_0 = \sqrt{\frac{-2R^2}{\ln{\left( 1-\frac{P_R}{P_0}\right)}}}
+\end{gather}
+Then we may plug our measured values for Hestia in. For apetures along the light path of $\diameter = 0.9mm, 3.6mm$, we obtain power outputs $P_R/P_0 =  .24mW/2.5mW$ and $2.0mW/2.5mW$ respectively. Both these values predict $w_0=4.01mm$.\\
+Also, the maximum intensity of a beam as a function of $z$ is given by \\
+\subsection{CORRECTED BEAM WAIST}
+    At current settings, the beam diameter is 1.536mm. Computations are as follows for an unrestricted beam of 0.761mW and a beam restricted through an aperture with diameter of 1.0mm with a power of 0.435mW. This results in 
+    \begin{equation}
+        W_0 = \sqrt{\left( \frac{-2*0.5^2}{ln\left[1-(.435/.761)\right]}\right)}
+    \end{equation}
+    So that $ 2W_0 = 1.536mm$. This time, I was very cautious to optomize the transmission of my beam through the aperture.
+\begin{gather}
+    I(0,z)= \frac{2P_0}{\pi \left(\omega(z)\right)^2}
+\end{gather}
+while the beam waist as a function of z is given by
+\begin{gather}
+    \omega_0 = \sqrt{1+\left(z/z_R \right)^2}
+\end{gather}
+where the Rayleigh length is
+\begin{gather}
+    z_R = \frac{\pi \omega_0^2 n}{\lambda}
+\end{gather}

@@ -1,0 +1,665 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Wilson}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=e4928da4dcca128d357dd1f4db2398e5}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=cbba9b4f1b01035fe43d33b4e0ca2585}{%
+           family={Booth},
+           familyi={B\bibinitperiod},
+           given={M.J.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bd2915c8d093b677590cb7722c49646d}{%
+           family={Juskaitis},
+           familyi={J\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6333a40e350d8e4049f5550bb28e6243}{%
+           family={Botcherby},
+           familyi={B\bibinitperiod},
+           given={E.J.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{71ac2a9b6aa5a8f517636f29a1fdef37}
+      \strng{fullhash}{d04d62381ef44678f8ce8c4298a97abc}
+      \strng{fullhashraw}{d04d62381ef44678f8ce8c4298a97abc}
+      \strng{bibnamehash}{d04d62381ef44678f8ce8c4298a97abc}
+      \strng{authorbibnamehash}{d04d62381ef44678f8ce8c4298a97abc}
+      \strng{authornamehash}{71ac2a9b6aa5a8f517636f29a1fdef37}
+      \strng{authorfullhash}{d04d62381ef44678f8ce8c4298a97abc}
+      \strng{authorfullhashraw}{d04d62381ef44678f8ce8c4298a97abc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Communications}
+      \field{title}{An optical technique for remote focusing in microscopy}
+      \field{type}{Journal Article}
+      \field{year}{2007}
+      \field{pages}{880\bibrangedash 887}
+      \range{pages}{8}
+      \verb{doi}
+      \verb doi:10.1016/j.optcom.2007.10.007
+      \endverb
+    \endentry
+    \entry{Hobson}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=a7aa42f147485d9fb3cf5275feb29703}{%
+           family={Hobson},
+           familyi={H\bibinitperiod},
+           given={Chad\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{fullhash}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{fullhashraw}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{bibnamehash}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{authorbibnamehash}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{authornamehash}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{authorfullhash}{a7aa42f147485d9fb3cf5275feb29703}
+      \strng{authorfullhashraw}{a7aa42f147485d9fb3cf5275feb29703}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the Biomechanics of Cell Nuclei: Insights from Combined Force and Light Microscopy}
+      \field{type}{Thesis}
+      \field{year}{2021}
+    \endentry
+    \entry{Annibale}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f84b96e1786dc33aa2bcb2286bf22456}{%
+           family={Annibale},
+           familyi={A\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f787ea4af134f0d7ec5854216b70a785}{%
+           family={Dvornikov},
+           familyi={D\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod},
+           suffix={Alexander\bibnamedelima Gratton},
+           suffixi={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{94c3103a4281405be9b0516830b31efb}
+      \strng{fullhash}{94c3103a4281405be9b0516830b31efb}
+      \strng{fullhashraw}{94c3103a4281405be9b0516830b31efb}
+      \strng{bibnamehash}{94c3103a4281405be9b0516830b31efb}
+      \strng{authorbibnamehash}{94c3103a4281405be9b0516830b31efb}
+      \strng{authornamehash}{94c3103a4281405be9b0516830b31efb}
+      \strng{authorfullhash}{94c3103a4281405be9b0516830b31efb}
+      \strng{authorfullhashraw}{94c3103a4281405be9b0516830b31efb}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biomedical Optics Express}
+      \field{title}{Electronically Tunable lens speeds up 3D orbital tracking}
+      \field{type}{Journal Article}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{pages}{2181\bibrangedash 2190}
+      \range{pages}{10}
+      \verb{doi}
+      \verb DOI:10.1364/BOE.6.002181
+      \endverb
+    \endentry
+    \entry{Chen}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4813a2079647f41d0ed98a0181d267d2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Leihao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=261f581ba69389da60ef98534bcad839}{%
+           family={Ghilardi},
+           familyi={G\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=12c29fd0d834b02048de9895f03d0b60}{%
+           family={Busfield},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima J.C.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ea0c9db5f6b90d8273fd5148710fb4fa}{%
+           family={Carpi},
+           familyi={C\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{68b57314e24b8063caaa707e035707d3}
+      \strng{fullhash}{8815a57b185b4f243079059f335fb866}
+      \strng{fullhashraw}{8815a57b185b4f243079059f335fb866}
+      \strng{bibnamehash}{8815a57b185b4f243079059f335fb866}
+      \strng{authorbibnamehash}{8815a57b185b4f243079059f335fb866}
+      \strng{authornamehash}{68b57314e24b8063caaa707e035707d3}
+      \strng{authorfullhash}{8815a57b185b4f243079059f335fb866}
+      \strng{authorfullhashraw}{8815a57b185b4f243079059f335fb866}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in robotics and AI}
+      \field{title}{Eletronically Tunable Lenses: A Review}
+      \field{type}{Journal Article}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+      \verb{doi}
+      \verb doi: 10.3389/frobt.2021.678046
+      \endverb
+    \endentry
+    \entry{Zuo}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f721a9aa317ced806b8c1e5612f6129f}{%
+           family={Zuo},
+           familyi={Z\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1ffd5ac527f73d08c2f438dc04a7623f}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1870a89293330f79ee0a1352887a5c92}{%
+           family={Weijuan},
+           familyi={W\bibinitperiod},
+           given={Anand},
+           giveni={A\bibinitperiod},
+           suffix={Qu\bibnamedelima Asundi},
+           suffixi={Q\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f1b7ffdb9bcf4f94a11e0badc5e78de}
+      \strng{fullhash}{89ccfcc168b7e3342128e2823b50150d}
+      \strng{fullhashraw}{89ccfcc168b7e3342128e2823b50150d}
+      \strng{bibnamehash}{89ccfcc168b7e3342128e2823b50150d}
+      \strng{authorbibnamehash}{89ccfcc168b7e3342128e2823b50150d}
+      \strng{authornamehash}{1f1b7ffdb9bcf4f94a11e0badc5e78de}
+      \strng{authorfullhash}{89ccfcc168b7e3342128e2823b50150d}
+      \strng{authorfullhashraw}{89ccfcc168b7e3342128e2823b50150d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{OPTICS EXPRESS}
+      \field{number}{20}
+      \field{title}{High-speed transport-of-intensity phase microscopy with an electrically tunable lens}
+      \field{type}{Journal Article}
+      \field{volume}{21}
+      \field{year}{2013}
+      \verb{doi}
+      \verb DOI:10.1364/OE.21.024060
+      \endverb
+    \endentry
+    \entry{Goodman}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=715ae9f4b2b2a8e252870bb9ebf7884c}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Joseph\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Englewood, Colorado}%
+      }
+      \list{publisher}{2}{%
+        {Roberts}%
+        {Co.}%
+      }
+      \strng{namehash}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{fullhash}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{fullhashraw}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{bibnamehash}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{authorbibnamehash}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{authornamehash}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{authorfullhash}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \strng{authorfullhashraw}{715ae9f4b2b2a8e252870bb9ebf7884c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0974707724}
+      \field{title}{Introduction to Fourier Optics, 3rd Ed.}
+      \field{type}{Book}
+      \field{year}{2005}
+    \endentry
+    \entry{Qu}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=02e274f481bdb355da4e7d5c14c4f08c}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Yufu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ad7cafb9f23ffe388b058ef52847ebd9}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yongbo},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{580d3540d16062cd3057874d3c53010d}
+      \strng{fullhash}{580d3540d16062cd3057874d3c53010d}
+      \strng{fullhashraw}{580d3540d16062cd3057874d3c53010d}
+      \strng{bibnamehash}{580d3540d16062cd3057874d3c53010d}
+      \strng{authorbibnamehash}{580d3540d16062cd3057874d3c53010d}
+      \strng{authornamehash}{580d3540d16062cd3057874d3c53010d}
+      \strng{authorfullhash}{580d3540d16062cd3057874d3c53010d}
+      \strng{authorfullhashraw}{580d3540d16062cd3057874d3c53010d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wiley Microscopy Reserach and Technique}
+      \field{title}{Analysis of axial scanning range and magnification variation in wide-field microscope for measurement using an electrically tunable lens}
+      \field{type}{Journal Article}
+      \field{volume}{82}
+      \field{year}{2019}
+      \field{pages}{101\bibrangedash 113}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1002/jemt.23113
+      \endverb
+    \endentry
+    \entry{Fahrbach}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e88a9646c12c4cdec99baf48bf34aea2}{%
+           family={Fahrbach},
+           familyi={F\bibinitperiod},
+           given={Florian\bibnamedelima O.},
+           giveni={F\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=a32bb17c78e6599b95e2c4c443fc4cb4}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Fabian\bibnamedelima F.},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=21b481f5dff243098574c2319c707eef}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e5b80f3987bc0312ee0eb7101c68d315}{%
+           family={Helmchen},
+           familyi={H\bibinitperiod},
+           given={Fritjof},
+           giveni={F\bibinitperiod}}}%
+        {{hash=fadc7db0472580f1b1ec9f169d96fe2a}{%
+           family={Huisken},
+           familyi={H\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c21b036e07d2e1dd7eac5dfc145048e5}
+      \strng{fullhash}{aeb1892eed29c27609396d8a9ef43c32}
+      \strng{fullhashraw}{aeb1892eed29c27609396d8a9ef43c32}
+      \strng{bibnamehash}{aeb1892eed29c27609396d8a9ef43c32}
+      \strng{authorbibnamehash}{aeb1892eed29c27609396d8a9ef43c32}
+      \strng{authornamehash}{c21b036e07d2e1dd7eac5dfc145048e5}
+      \strng{authorfullhash}{aeb1892eed29c27609396d8a9ef43c32}
+      \strng{authorfullhashraw}{aeb1892eed29c27609396d8a9ef43c32}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Express}
+      \field{number}{192746}
+      \field{title}{Rapid 3D light-sheet microscopy with a tunable lens}
+      \field{type}{Journal Article}
+      \field{volume}{21}
+      \field{year}{2013}
+      \field{pages}{21010\bibrangedash 21026}
+      \range{pages}{17}
+      \verb{doi}
+      \verb DOI:10.1364/OE.21.021010
+      \endverb
+    \endentry
+    \entry{Liu}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=3342346b9868dfc3f4b9f0f8fa309583}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Bei},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a7aa42f147485d9fb3cf5275feb29703}{%
+           family={Hobson},
+           familyi={H\bibinitperiod},
+           given={Chad\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=849ffa96d89da008028ce39ab8082f24}{%
+           family={Pimenta},
+           familyi={P\bibinitperiod},
+           given={Frederico\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=974aed53de7cad0ecacc1a09514217bf}{%
+           family={Nelsen},
+           familyi={N\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=feee9cbc0ba8354da60c756d7607b807}{%
+           family={Hsiao},
+           familyi={H\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod}}}%
+        {{hash=44becac8800a1b2cd99d2b22dae390ae}{%
+           family={O'Brien},
+           familyi={O\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5d83a640355aba11a30b90bbdb42800f}{%
+           family={Falvo},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=1ddaa21a134f5e8b072967136c6bb46e}{%
+           family={Hahn},
+           familyi={H\bibinitperiod},
+           given={Klaus\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3a104a50139909568851b4b9e55ed0f2}{%
+           family={Superfine},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6f4d8279c74bd0697a0cf5976c4eaf2}
+      \strng{fullhash}{7e59ff3cfe0b6da8cd510bbb5b4b44a9}
+      \strng{fullhashraw}{7e59ff3cfe0b6da8cd510bbb5b4b44a9}
+      \strng{bibnamehash}{e6f4d8279c74bd0697a0cf5976c4eaf2}
+      \strng{authorbibnamehash}{e6f4d8279c74bd0697a0cf5976c4eaf2}
+      \strng{authornamehash}{e6f4d8279c74bd0697a0cf5976c4eaf2}
+      \strng{authorfullhash}{7e59ff3cfe0b6da8cd510bbb5b4b44a9}
+      \strng{authorfullhashraw}{7e59ff3cfe0b6da8cd510bbb5b4b44a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Express}
+      \field{title}{VIEW-MOD: a versatile illumination engine with a modular optical design for fluorescence microscopy}
+      \field{type}{Journal Article}
+      \field{volume}{27}
+      \field{year}{2019}
+      \field{pages}{19950\bibrangedash 19972}
+      \range{pages}{23}
+      \verb{doi}
+      \verb https://doi.org/10.1364/OE.27.019950
+      \endverb
+    \endentry
+    \entry{uManager}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=bcbcfe3a07db4486bb42a1c6b02b19e7}{%
+           family={Edelstein},
+           familyi={E\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=68e654434ccc04f24661f138943bbe14}{%
+           family={Nenad},
+           familyi={N\bibinitperiod},
+           given={Amodaj},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f86ffcb481578f06c69cd14b8f1e2aff}{%
+           family={Hoover},
+           familyi={H\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d465a8582cfbf0402b7504e74c2e8feb}{%
+           family={Vale},
+           familyi={V\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fa9cbb4532b4e72a64bdadcd7e418c19}{%
+           family={Stuurman},
+           familyi={S\bibinitperiod},
+           given={Nico},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{956076cf46c87e782025b510a2c51d18}
+      \strng{fullhash}{1b363b9abbafd1618a0a0e2f0b14fcbc}
+      \strng{fullhashraw}{1b363b9abbafd1618a0a0e2f0b14fcbc}
+      \strng{bibnamehash}{1b363b9abbafd1618a0a0e2f0b14fcbc}
+      \strng{authorbibnamehash}{1b363b9abbafd1618a0a0e2f0b14fcbc}
+      \strng{authornamehash}{956076cf46c87e782025b510a2c51d18}
+      \strng{authorfullhash}{1b363b9abbafd1618a0a0e2f0b14fcbc}
+      \strng{authorfullhashraw}{1b363b9abbafd1618a0a0e2f0b14fcbc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Current Protocols in Molecular Biology}
+      \field{number}{1}
+      \field{title}{Computer Control of Microscopes using uManager}
+      \field{type}{Journal Article}
+      \field{volume}{92}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+    \endentry
+    \entry{Ernst}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=8320b6d6e6771fc3595315559da5aed4}{%
+           family={Ernst},
+           familyi={E\bibinitperiod},
+           given={H.K.\bibnamedelimi Stelzer},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=00e200780bb560a5be490e0e996e7162}{%
+           family={Strobl},
+           familyi={S\bibinitperiod},
+           given={Frederic},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f388cf517c80e7c2cd8b5b3af5dbc736}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Bo-Jui},
+           giveni={B\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=369954d3a687f84d7df7751cfe22bf4e}{%
+           family={Preusser},
+           familyi={P\bibinitperiod},
+           given={Friedrich},
+           giveni={F\bibinitperiod}}}%
+        {{hash=52ebeccf5706d204d6ea2f00afdc0a82}{%
+           family={Preibisch},
+           familyi={P\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=736a413b6d088c2afa2668044cd75b91}{%
+           family={McDole},
+           familyi={M\bibinitperiod},
+           given={Katie},
+           giveni={K\bibinitperiod}}}%
+        {{hash=55d93306497e2172161df53f2abc54ea}{%
+           family={Fiolka},
+           familyi={F\bibinitperiod},
+           given={Reto},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{22b5a2b4162a84803502a02d87cd7699}
+      \strng{fullhash}{eae44d6d39bf13db9ac111165173eada}
+      \strng{fullhashraw}{eae44d6d39bf13db9ac111165173eada}
+      \strng{bibnamehash}{22b5a2b4162a84803502a02d87cd7699}
+      \strng{authorbibnamehash}{22b5a2b4162a84803502a02d87cd7699}
+      \strng{authornamehash}{22b5a2b4162a84803502a02d87cd7699}
+      \strng{authorfullhash}{eae44d6d39bf13db9ac111165173eada}
+      \strng{authorfullhashraw}{eae44d6d39bf13db9ac111165173eada}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews}
+      \field{title}{Light Sheet Fluorescence Microscopy}
+      \field{type}{Journal Article}
+      \field{volume}{1}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 25}
+      \range{pages}{25}
+    \endentry
+    \entry{Remacha}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=1c6231c73ae87b9687bcb27b600960a1}{%
+           family={Remacha},
+           familyi={R\bibinitperiod},
+           given={Elena},
+           giveni={E\bibinitperiod}}}%
+        {{hash=07ba4a038dbdc331554312fa2b51348d}{%
+           family={Friedrich},
+           familyi={F\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c7593a44ad229034cd4022758f2eb87b}{%
+           family={Vermot},
+           familyi={V\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e88a9646c12c4cdec99baf48bf34aea2}{%
+           family={Fahrbach},
+           familyi={F\bibinitperiod},
+           given={Florian\bibnamedelima O.},
+           giveni={F\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5e0003aa128e23a29f727b72961f0ee}
+      \strng{fullhash}{f1c6c6be1267e7a530a6ec8595ba887a}
+      \strng{fullhashraw}{f1c6c6be1267e7a530a6ec8595ba887a}
+      \strng{bibnamehash}{f1c6c6be1267e7a530a6ec8595ba887a}
+      \strng{authorbibnamehash}{f1c6c6be1267e7a530a6ec8595ba887a}
+      \strng{authornamehash}{a5e0003aa128e23a29f727b72961f0ee}
+      \strng{authorfullhash}{f1c6c6be1267e7a530a6ec8595ba887a}
+      \strng{authorfullhashraw}{f1c6c6be1267e7a530a6ec8595ba887a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biomedical Optics Express}
+      \field{title}{How to define and optimize axial resolution in light-sheet microscopy: a simulation-based approach}
+      \field{type}{Journal Article}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{pages}{8\bibrangedash 26}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1364/BOE.11.000008
+      \endverb
+    \endentry
+    \entry{Fiji}{article}{}{}
+      \name{author}{15}{}{%
+        {{hash=ac82c7686cb5af1a978185f449f30702}{%
+           family={Schindelin},
+           familyi={S\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fb4a9b4f8cb47f8bee748d32779b7d01}{%
+           family={Arganda-Carreras},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Ignacio},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0a776e2acaca3da7f09464eed966703a}{%
+           family={Frise},
+           familyi={F\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cf3458a8158dd8bcbccb1d9f3bae1444}{%
+           family={Kaynig},
+           familyi={K\bibinitperiod},
+           given={Verena},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f8d350e633e669ecce76f53a255ca7e6}{%
+           family={Longair},
+           familyi={L\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=74624b572b3fd665ada5f45e837b3fad}{%
+           family={Pietzsch},
+           familyi={P\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=52ebeccf5706d204d6ea2f00afdc0a82}{%
+           family={Preibisch},
+           familyi={P\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1278dc454496030a575c2364261b643e}{%
+           family={Rueden},
+           familyi={R\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e3100f88cc060bd3d2cc5fc5d24ea490}{%
+           family={Saalfeld},
+           familyi={S\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=21b481f5dff243098574c2319c707eef}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=51fcbf8611c8067bed3b33bf0f587c8e}{%
+           family={Tinevez},
+           familyi={T\bibinitperiod},
+           given={Jean-Yves},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=2cbf1102bb63abcf1e7de9007399d6cb}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Daniel\bibnamedelima James},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ab16022f9fa944777da25790f7620b79}{%
+           family={Eliceiri},
+           familyi={E\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6166a3f540ffe514a2b0a8932f8fca1c}{%
+           family={Tomancak},
+           familyi={T\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+        {{hash=704fa1d6130928d88680f2323fd9ff84}{%
+           family={Cardona},
+           familyi={C\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{fullhash}{2128a96211ae244ce42c70cb35c717f6}
+      \strng{fullhashraw}{2128a96211ae244ce42c70cb35c717f6}
+      \strng{bibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{authorbibnamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{authornamehash}{ad1bfba2c8792d8fa685fed6100cfb98}
+      \strng{authorfullhash}{2128a96211ae244ce42c70cb35c717f6}
+      \strng{authorfullhashraw}{2128a96211ae244ce42c70cb35c717f6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{title}{Fiji: An open-source platform for biological image analysis}
+      \field{type}{Journal Article}
+      \field{volume}{9}
+      \field{year}{2012}
+      \field{pages}{676\bibrangedash 682}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1038/nmeth.2019
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

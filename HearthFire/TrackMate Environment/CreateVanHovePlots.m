@@ -1,0 +1,92 @@
+function VanHove= CreateVanHovePlots(SpaceUnits, TimeUnits, InputTracks,BinSize, TimeSteps, main_folder, MinBin, FrameTime)
+arguments
+    SpaceUnits {isstring}
+    TimeUnits{isstring}
+    InputTracks {iscell}
+    BinSize {isinteger, isscalar}
+    TimeSteps {isrow}
+    main_folder {isfolder}
+    MinBin {isscalar} = 0.001
+    FrameTime {isscalar}= 1 
+% In TimeUnits, gives the number of time units per matrix row. Should be
+% same value as dt from FigMeanMSD.
+end
+% This function creates Van Hove Distributions and returns the list of bin
+% centerpoints, the total number of dx steps found for each dt, and the raw
+% data used for PlotVanHove. Dependencies: ComputeVanHove, VanHoveEquiBin,
+% PlotVanHove, VanHove2 BinSize determines how many datapoints go in each
+% bin InputTracks determines the tracking file that it analyzes TimeSteps
+% determines the tau values we test and plot. Less is more. main_folder
+% threshold gives the minimum bin width in microns.
+
+% Known issues: The only problem is that small binning tends to cause
+% massive spikes around zero due to the consolidation of zero-width bins.
+% Basically, you end up dividing a huge number of datapoints by an
+% impossibly small bin width, causing a massive probability overload that
+% screws up the chart with an undefined or nearly undefined datapoint. This
+% could be an underlying issue, or, more likely, is an artifact of the
+% minimum resolution of the input program, which does not compute infintely
+% small sub-pixel localization, causing many 0 displacement steps in slow
+% moving or stationary datasets. Thus, I think the error is in taking steps
+% much smaller than the intended precision of our  incoming dataset, rather
+% than in the algorithm itself.
+
+
+
+VanHoveData=ComputeVanHove(InputTracks,TimeSteps);
+[CenterPoint,EquiProb,TotStepsCountCell]=VanHoveEquiBin(VanHoveData, TimeSteps, BinSize, MinBin);
+TotStepsCount = cellArrayToTable(TotStepsCountCell);
+
+
+VanHove = struct();
+if nargout ~= 0
+    VanHove.Data = VanHoveData;
+    VanHove.CenterPoint = CenterPoint;
+    VanHove.EquiProb = EquiProb;
+    VanHove.TotStepsCount = TotStepsCount;
+    VanHove.BinSize = BinSize;
+    VanHove.tau = TimeSteps;
+    VanHove.FrameTime = FrameTime;
+    VanHove.MinBin = MinBin;
+    VanHove.SpaceUnits = SpaceUnits;
+    VanHove.TimeUnits = TimeUnits;
+end
+
+% Pcent=0.5;
+% Percentiles=[(100-Pcent), (Pcent)];
+% for k=TimeSteps
+%     P{k} = prctile(VanHoveData{k}(:,1),Percentiles);
+%     %for j = 1:length(VanHoveData{k}(:,1))
+%     %   DiffLimitDefiner=VanHoveData{k}(:,j)
+% end
+
+
+
+if length(CenterPoint{1})> 1000
+    warning("Over 1000 bins. Irregularities may occcur.")
+elseif length(CenterPoint{1}) > 500
+    warning("Over 500 bins. Irregularities may occcur.")
+elseif length(CenterPoint{1}) > 250
+    warning("Over 250 bins. Irregularities may occcur.")
+end
+if min(diff(CenterPoint{1}))<0.001
+    warning("Minimum bin size under 1nm. Irregularities may occur.")
+end
+end
+
+
+function T = cellArrayToTable(C)
+% Ensure input is a cell array
+if ~iscell(C)
+    error('Input must be a cell array.');
+end
+
+% Find non-empty cells
+nonEmptyIdx = find(~cellfun(@isempty, C));
+
+% Extract values from non-empty cells
+values = cell2mat(C(nonEmptyIdx));
+
+% Create table
+T = table(nonEmptyIdx(:), values(:), 'VariableNames', {'CellNumber', 'Value'});
+end
