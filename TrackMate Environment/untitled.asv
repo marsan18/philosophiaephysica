@@ -1,0 +1,18 @@
+function [output_directory, SuperStruct] = MasterSaveDeployment(ma,main_folder, saveDir, units)
+arguments
+    ma {isstruct}
+    main_folder {isfolder}
+    SpaceUnits {isstring}
+    TimeUnits {isstring}
+    saveDir {isfolder}= uigetdir()
+   
+end
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+output_directory = inputArg2;
+SuperStruct.msdanalyzer = ma;
+SuperStruct.source = main_folder;    
+saveDir(strcat(main_folder, '\SuperStruct', string(datetime)), SuperStruct, '-mat');
+    end
+end
+

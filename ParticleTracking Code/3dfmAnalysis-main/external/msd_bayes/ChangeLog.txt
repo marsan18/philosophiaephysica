@@ -1,2 +1,0 @@
-2013-06-03  Jeremy Cribb
-	* Initial, unchanged version.

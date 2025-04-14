@@ -1,4 +1,0 @@
-2005-08-14  Jeremy Cribb <jcribb@email.unc.edu>
-	* maingui.m:  contains matlab code for main 3dfmanalysis interface.  Initial Version.
-	* maingui.fig:  defines the matlab GUI for maingui.  Initial Version.
-
