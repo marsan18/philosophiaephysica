@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Alexander} % Your first name
+\familyname{Marshall} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Physicist}
+\address{4146 Stonecrest Drive, Apartment 301}{Burlington, North Carolina 27215}
+% \mobile{(336) 618 9851}
+\phone{(336) 618 9851}
+% \fax{(000) 111 1113}
+\email{al3xmarshall99@gmail.com}
+\homepage{philosophiaephysica.org}{} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\extrainfo{Royster Doctoral Fellow at UNC Chapel Hill}
+
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+\clearpage
+
+\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+\date{\today} % Letter date
+\opening{To Whom it May Concern,} % Opening greeting
+\closing{Sincerely,} % Closing phrase
+\enclosure[Attached]{Curriculum Vit\ae{}} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+\lipsum[1-2] % Dummy text
+\lipsum[4] % Dummy text
+
+\makeletterclosing % Print letter signature
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2022-Present}{Doctorate of Philosophy in Physics}{The University of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{Royster Doctoral Fellow}  % Arguments not required can be left empty
+\cventry{2025}{Master's Degree in Physics}{The University of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{Completed \textit{en route} to PhD}
+\cventry{2018-2022}{B.S. with Honors in Physics, B.A. in Philosophy, Minor in Math.}{Wake Forest University}{Winston-Salem, NC}{}{GPA 3.91 $\vert$ \textit{Summa Cum Laude} $\vert$ Stamps Scholar}
+\cventry{2014-2018}{High School Diploma}{West Forsyth High School}
+{Clemmons, NC}{}{Junior Marshall $\vert$ Top 1\% of graduating class}
+
+\section{Academic Projects}
+
+\subsection{Honors Thesis}
+
+\cvitem{}{\emph{Generating a 3-D Lattice of Photonic Spheres to Track Fluorescently Labelled Chromatin}}
+\cvitem{Advisor}{Dr. Keith Bonin}
+\cvitem{Comittee}{Dr. Keith Bonin, Dr. George Holzwarth, Dr. Stephen Baker}
+\cvitem{Description}{Wrote a custom iterative routine to generate, test, and analyze hundreds of
+thousands of phase settings on a spatial light modulator, implementing the correction method of Dholakia et al. (2017) Used this routine to create 3D lattice of photonic spheres to be used for tracking labelled chromatin in irradiated cells.}
+
+\subsection{Masters Thesis}
+
+\cvitem{}{\emph{Ultra-fast Particle Tracking of Quantum Dots in Polyacrylamide Reveals Highly Anomalous, Non-Gaussian Diffusion on Short Timescales in Poroelastic Media.}}
+\cvitem{Advisor}{Richard Superfine}
+\cvitem{Thesis Comittee}{Dr. Richard Superfine, Dr. C.A. Forrest, Dr. David Hill, Dr. Amy Oldenburg, Dr. Ehssan Nazockdast}
+\cvitem{Description}{Tracked quantum dots undergoing dynamic diffusion in poroelastic media at ultra-high frame rates using highly-inclined swept tile light sheet fluorescent microscopy. Customized a unique microscope to enable this technique. Tracked particles and acheived the highest known temporal resolution sub-diffraction limit particle tracking of anomalous diffusion in poroelastic media.}
+
+\subsection{Doctoral Thesis}
+\cvitem{}{\emph{Anomalous Diffusion in Poroelastic Media}}
+\cvitem{Advisor}{Richard Superfine}
+\cvitem{Thesis Comittee}{Dr. Richard Superfine, Dr. C.A. Forrest, Dr. David Hill, Dr. Amy Oldenburg, Dr. Ehssan Nazockdast}
+\cvitem{Description}{TBD.}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\subsection{Additional Research}
+
+\cventry{2021}{Investigating Chalcogenide Crystals for Quantum Computing}{Wake Forest Nanotech Center}{Winston-Salem}{David Carroll}{}
+
+\cventry{2019-2021}{Examining Neurochemical Addiction Mechanisms}{Wake Forest Medical School}{Winston-Salem}{Evgeny Budygin}{}
+
+\cventry{2019}{Cultural Impacts of Oenology in the Peleponnese}{Wake Forest Department of Anthropology}{Winston-Salem}{Karen Friederic}{}
+
+\cventry{2018}{Cancer and Postoperative Pain}{Wake Forest Baptist Medical Center}{Winston-Salem}{Chris Peters}{}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Scholarships and Grants}
+
+\cvitem{2022-2027}{\textbf{Royster Doctoral Fellowship.} Five-year fellowship awarded for academic merit.}
+\cvitem{2018-2022}{\textbf{Stamps Scholarship.} Four-year full scholarship awarded for academic merit.}
+\cvitem{2019}{\textbf{Wake Forest Scholars Travel Grant.} Awarded to fund anthropology project in Greece.}
+
+
+%----------------------------------------------------------------------------------------
+%	Publications
+%----------------------------------------------------------------------------------------
+\section{Publications}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Technical skills}
+
+\cvitem{Advanced Coding}{MATLAB, LabVIEW, Python, \LaTeX}
+\cvitem{Scripting}{$\mu$Manager, ImageJ}
+\cvitem{Data Analysis}{Particle Tracking, Image Analysis}
+\cvitem{Laboratory Skills}{Transmission Microscopy, Fluorescent Microscopy, Light Sheet Fluorescent Microscopy, Total Internal Reflection Microscopy, Optics, 4F Laser Systems, Spatial Light Modulator, Remote Focusing, Particle Tracking, Machine Vision, Atomic Force Microscopy}
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Conference Poster Presentations}
+\cvitemwithcomment{2019}{Undergraduate Research Symposium (URECA)}{Wake Forest University}
+\cvitemwithcomment{2022}{Wake Forest Physics Department Colloqium Presenter}{Wake Forest University}
+\cvitemwithcomment{2023-2025}{Triangle Cytoskeleton Meeting}{Duke University}
+\cvitemwithcomment{2022-2027}{UNC APS Department Colloqium}{UNC Chapel HIll}
+\cvitemwithcomment{2024}{8th Inernational Soft Matter Conference}{Raleigh, NC}
+\cvitemwithcomment{2025}{Triangle Soft Matter Meeting}{Duke University}
+%----------------------------------------------------------------------------------------
+%	Teaching and Mentorship
+%----------------------------------------------------------------------------------------
+\section{Teaching and Mentorship}
+\cvitem{2021-Present}{Several Semesters as a teachers assistant}
+\cvitem{2018-Present}{Private tutoring}
+\cvitem{Anticipated Spring 2025}{Instructor of Record for First Year Seminar}
+\cvitem{Lead a Team of Undergraduates}{2024-Present}
+
+%----------------------------------------------------------------------------------------
+%	Outreach Projects
+%----------------------------------------------------------------------------------------
+
+\section{Outreach}
+\cventry{2015--2017}{Volunteer}{Wake Forest Baptist Medical Center}{Winston-Salem}{over 400 accumulated hours}{}
+\cventry{2023-Present}{Open Flexure Microscope and Molecular Stamper}{UNC APS Department}{Chapel Hill}{}{Constructing low cost microscopes for use in low-resource environments. Project has recieved multiple awards, including the UNC MakerFest Entrepreneurship Award.}
+\cventry{2023-Present}{UNC ScienceFest}{UNC Chapel Hill}{Chapel Hill}{}{}
+
+%----------------------------------------------------------------------------------------
+%	Relevant Coursework
+%----------------------------------------------------------------------------------------
+\section{Select Coursework}
+\cventry{}{}{Unversity of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{}
+\cvitemwithcomment{}{Graduate Mathematical Methods}{2022}
+\cvitemwithcomment{}{Graduate Quantum Mechanics}{2022}
+\cvitemwithcomment{}{Graduate Classical Dynamics}{2022}
+\cvitemwithcomment{}{Graduate Statistical Mechanics}{2023}
+\cvitemwithcomment{}{Graduate Electromagnetism}{2022}
+\cvitemwithcomment{}{Fluid Dynamics}{2025}
+\cvitemwithcomment{}{Biophysics}{2025}
+\cvitemwithcomment{}{Optics}{2024}
+\cventry{}{}{Wake Forest Univeristy}{Winston-Salem, NC}{}{}
+\cvitemwithcomment{}{2022}{Partial Differential Equations}
+\cvitemwithcomment{}{2022}{Quantum Computing}
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+
+\section{References}
+\cvitemwithcomment{Richard Superfine, PhD}{superfine@unc.edu}{Doctoral Advisor}
+\cvitemwithcomment{Keith Bonin, PhD}{bonin@wfu.edu}{Undergraduate Research Advisor}
+\cvitemwithcomment{Evgeny Budygin, PhD, PharmD}{budygin@gmail.com}{Undergraduate Research Mentor}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Fluent}{Native Speaker}
+\cvitemwithcomment{Modern Greek}{Intermediate}{Conversational}
+\cvitemwithcomment{Classical Latin}{Intermediate}{Several years of formal instruction}
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{~-} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Piano}{Chess}
+\cvlistdoubleitem{Long-Distance Running}{Backpacking}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
