@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.3)  21 NOV 2025 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.3)  27 JAN 2026 08:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,13 +565,13 @@ vips/tex-gyre/q-ts1.enc}]
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <14.4> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 100.
+(Font)              <10> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 100.
+(Font)              <7> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 100.
+(Font)              <5> on input line 98.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 100.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
 
 
 LaTeX Font Warning: Font shape `T1/lmss/sb/n' undefined
@@ -624,16 +624,16 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `cv_7.out' has not changed.
-(rerunfilecheck)             Checksum: D84807FCE8152FCF447B115186663099;1970.
+(rerunfilecheck)             Checksum: 35209293CE94820C5EFABC76A28C0C85;2129.
  ) 
 Here is how much of TeX's memory you used:
  13044 strings out of 474104
  210572 string characters out of 5747503
- 1939496 words of memory out of 5000000
+ 1938496 words of memory out of 5000000
  35119 multiletter control sequences out of 15000+600000
  621993 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,1001b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,13n,93p,1001b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2024/texmf-dist/fonts/
 type1/public/lm/lmss17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lm
@@ -642,7 +642,7 @@ ive/2024/texmf-dist/fonts/type1/public/lm/lmsso10.pfb><c:/texlive/2024/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/pub
 lic/marvosym/marvosym.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gy
 re/qplr.pfb>
-Output written on cv_7.pdf (5 pages, 195522 bytes).
+Output written on cv_7.pdf (5 pages, 195571 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  134 compressed objects within 2 object streams
