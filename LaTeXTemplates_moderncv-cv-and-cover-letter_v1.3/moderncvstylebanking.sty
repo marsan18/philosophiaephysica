@@ -263,7 +263,7 @@
   % recompute lengths (in case we are switching from letter to resume, or vice versa)
   \recomputeletterlengths%
   % sender block
-  \maketitle%
+ %  \maketitle%
   \par%
    % recipient block
   \begin{minipage}[t]{.5\textwidth}
@@ -284,7 +284,7 @@
   \hspace{0pt}\par\vspace{-\baselineskip}\vspace{-\parskip}}
 
 \renewcommand*{\makeletterclosing}{
-  \@closing\\[3em]%
+  \@closing\\[1em]%
   {\bfseries \@firstname~\@familyname}%
   \ifthenelse{\isundefined{\@enclosure}}{}{%
     \\%
