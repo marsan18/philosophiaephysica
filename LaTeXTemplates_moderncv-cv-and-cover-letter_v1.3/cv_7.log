@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.16)  22 FEB 2026 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.16)  26 FEB 2026 08:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,8 +533,9 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \openout3 = `cv_7.out'.
 
 \pagenumberwidth=\skip76
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-9.
+ (./coverletter.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+7.
 
 (c:/Users/al3xm/Documents/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -544,29 +545,29 @@ g
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+7.
  (c:/Users/al3xm/Documents/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-89.
+27.
 
 (c:/Users/al3xm/Documents/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-89.
+27.
 
 (c:/Users/al3xm/Documents/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 89.
+(Font)              <10.95> on input line 27.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 89.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 89.
+(Font)              <6> on input line 27.
 
 
 [1
@@ -575,38 +576,39 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {c:/Users/al3xm/Documents/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex
 .map}{c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre
 /q-ec.enc}{c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/enc/dvips/lm/
-lm-mathsy.enc}]
+lm-mathsy.enc}])
 (c:/Users/al3xm/Documents/texlive/2024/texmf-dist/tex/latex/microtype/mt-mvs.cf
 g
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 )
-LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 9
-7.
+LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 6
+9.
 
 (c:/Users/al3xm/Documents/texlive/2024/texmf-dist/tex/latex/tex-gyre/ts1qpl.fd
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 105.
+(Font)              <10> on input line 77.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 105.
+(Font)              <7> on input line 77.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 105.
+(Font)              <5> on input line 77.
+(./research.tex
 
 LaTeX Font Warning: Font shape `T1/qpl/sb/n' undefined
-(Font)              using `T1/qpl/b/n' instead on input line 115.
+(Font)              using `T1/qpl/b/n' instead on input line 2.
 
 
-Underfull \hbox (badness 10000) detected at line 115
+Underfull \hbox (badness 10000) detected at line 2
 \T1/qpl/m/n/8 .
  []
 
 
 LaTeX Font Warning: Font shape `T1/qpl/sb/n' undefined
-(Font)              using `T1/qpl/b/n' instead on input line 121.
+(Font)              using `T1/qpl/b/n' instead on input line 8.
 
 
-Underfull \hbox (badness 10000) detected at line 121
+Underfull \hbox (badness 10000) detected at line 8
 \T1/qpl/m/n/8 .
  []
 
@@ -616,47 +618,49 @@ Underfull \hbox (badness 10000) detected at line 121
 ts1.enc}]
 
 LaTeX Font Warning: Font shape `T1/qpl/sb/n' undefined
-(Font)              using `T1/qpl/b/n' instead on input line 128.
+(Font)              using `T1/qpl/b/n' instead on input line 15.
 
 
-Underfull \hbox (badness 10000) detected at line 128
+Underfull \hbox (badness 10000) detected at line 15
 \T1/qpl/m/n/8 .
  []
 
 
 LaTeX Font Warning: Font shape `T1/qpl/sb/n' undefined
-(Font)              using `T1/qpl/b/n' instead on input line 139.
+(Font)              using `T1/qpl/b/n' instead on input line 26.
 
 
-Underfull \hbox (badness 10000) detected at line 139
+Underfull \hbox (badness 10000) detected at line 26
 \T1/qpl/m/n/8 .
  []
 
+)
 
-
-[3]
+[3] (./conferences.tex
 
 [4{c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathi
-t.enc}]
+t.enc}]) (./teaching.tex
 
-[5]
+[5]) (./mentorship.tex
 
-[6] (./cv_7.aux)
+[6]) (./refs.tex)
+
+[7] (./cv_7.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `cv_7.out' has not changed.
-(rerunfilecheck)             Checksum: 1B5E6547149B6039EBB2E24217BF4BE8;1931.
+(rerunfilecheck)             Checksum: 781AEC8BBBFEADBFF6DE09E7854999A2;1905.
  ) 
 Here is how much of TeX's memory you used:
- 13143 strings out of 473330
- 215909 string characters out of 5712591
- 744863 words of memory out of 5000000
- 35980 multiletter control sequences out of 15000+600000
- 621450 words of font info for 107 fonts, out of 8000000 for 9000
+ 13198 strings out of 473330
+ 216689 string characters out of 5712591
+ 744884 words of memory out of 5000000
+ 35999 multiletter control sequences out of 15000+600000
+ 622532 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,1310b,465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,13n,93p,1334b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi1
 0.pfb><c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/type1/public/lm/l
 msy10.pfb><c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/type1/public/
@@ -664,10 +668,10 @@ marvosym/marvosym.pfb><c:/Users/al3xm/Documents/texlive/2024/texmf-dist/fonts/t
 ype1/public/tex-gyre/qplb.pfb><c:/Users/al3xm/Documents/texlive/2024/texmf-dist
 /fonts/type1/public/tex-gyre/qplr.pfb><c:/Users/al3xm/Documents/texlive/2024/te
 xmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on cv_7.pdf (6 pages, 217927 bytes).
+Output written on cv_7.pdf (7 pages, 221051 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 29817 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 158 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 29825 words of extra memory for PDF output out of 29859 (max. 10000000)
 
