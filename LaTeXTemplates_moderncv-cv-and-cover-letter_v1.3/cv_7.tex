@@ -53,14 +53,14 @@
 \homepage{philosophiaephysica.org}{philosophiaephysica.org} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 \extrainfo{Royster Fellow $ \vert $ Doctoral Candidate $\vert$ UNC-Chapel Hill}
 
-\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %  \quote{"A witty and playful quotation" - John Smith}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\input{coverletter.tex}
+\input{summerfundingplan.tex}
 
 %----------------------------------------------------------------------------------------
 %	CURRICULUM VITAE
@@ -76,7 +76,7 @@
 
 \cventry{2027}{The University of North Carolina at Chapel Hill}{Doctorate of Philosophy in Physics}{Chapel Hill, NC}{}{Royster Doctoral Fellow $\vert$ Exams Passed $\vert$ All But Dissertation}  % Arguments not required can be left empty
 \cventry{2025}{The University of North Carolina at Chapel Hill}{Master of Science in Physics}{Chapel Hill, NC}{}{Completed \textit{en route} to PhD}
-\cventry{2022}{Wake Forest University}{B.S. in Physics, B.A. in Philosophy, Math Minor.}{Winston-Salem, NC}{}{GPA 3.91 $\vert$ \textit{Summa Cum Laude} $\vert$ Stamps Scholar}
+\cventry{2022}{Wake Forest University}{Physics B.S. $\vert$ Philosophy B.A. $\vert$ Mathematics Minor}{Winston-Salem, NC}{}{GPA 3.91 $\vert$ \textit{Summa Cum Laude} $\vert$ Honors in Physics $\vert$ Stamps Scholar} 
 
 \input{research.tex}
 
@@ -86,29 +86,34 @@
 %----------------------------------------------------------------------------------------
 
 \section{Scholarships and Grants}
-
-\cvitem{2022-2027}{\textbf{Royster Doctoral Fellowship.} Five-year fellowship awarded for academic merit.}
-\cvitem{2018-2022}{\textbf{Stamps Scholarship.} Four-year scholarship awarded for academic merit.}
-\cvitem{2019}{\textbf{Wake Forest Scholars Travel Grant.} Funded summer anthropology project abroad.}
+\cventry{2022-2027}{Royster Foundation}{Royster Doctoral Fellowship}{Chapel Hill, NC}{UNC-Chapel Hill Graduate School}{Five-year doctoral recruitment fellowship. Provides extradepartmental funding for the majority of a five year doctoral program.}  % 
+\cventry{2018-2022}{Stamps Foundation}{Stamps Scholarship}{Chapel Hill, NC}{}{ Four-year scholarship awarded for academic merit. Covered all costs of attendance to Wake Forest University, including room and board. Also provided a technology grant and semesterly stipend.}
+\cventry{2019}{Wake Forest University}{Summer Research Project Grant}{Winston-Salem, NC}{}{Granted for summer anthropology project studying the cultural impact of viticulture in the Peleponnese.}
 
 
 %----------------------------------------------------------------------------------------
 %	Publications
 %----------------------------------------------------------------------------------------
-\section{Publications}
-\cventry{Anticip. 2026}{Manuscript In Progress}{Strain alters large solute transport in poroelastic media}{Chapel Hill, NC}{UNC-Chapel Hill}{Alexander Marshall, Richard Superfine}
-\cventry{Anticip. 2026}{Manuscript In Progress}{Dynamic strains drive asymmetric advection in poroelastic media}{Chapel Hill, NC}{UNC-Chapel Hill}{Alexander Marshall, Richard Superfine}
+\input{pubs.tex}
+
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 \section{Technical skills}
+% \cventry{2022-Present}{UNC-Chapel Hill Dept. of Environmental Health and Safety}{Labortory Safety Manager}{Chapel Hill, NC}{Responsibilities include writing the lab safety plan, ensuring compliance during day-to-day operations, ensuring safety training compliance, disposing of hazardous waste, coordinating with EHS to maintain a safe workplace, and conducting regular inspections of critical safety equipment.}
 
-\cvitem{Coding Languages}{MATLAB, LabVIEW, Python, \LaTeX, Git}
-\cvitem{Scripting}{$\mu$Manager, ImageJ}
-\cvitem{Data Analysis}{Particle Tracking, Image Analysis, Stochastic Processes}
-\cvitem{Other}{Transmission Microscopy, Fluorescent Microscopy, Light Sheet Fluorescent Microscopy, Total Internal Reflection Microscopy, Custom Optical Design, Laser Systems, Spatial Light Modulation, Remote Focusing, Machine Vision, Misc. Lab Skills}
-\cvitem{Lab Safety}{I have been lab safety manager for three years. I am responsible for updating the lab safety plan, ensuring compliance during day-to-day operations, keeping everyone up to date with safety trainings, arranging for hazardous waste pickup, coordinating with EHS to maintain a safe workplace, and conducting regular inspections of critical safety equipment.}
+\cventry{2022-Present}{UNC-Chapel Hill}{Labortory Safety Manager}{Chapel Hlill, NC}{ Dept. of Environmental Health and Safety}{Responsibilities include writing the lab safety plan, ensuring compliance during day-to-day operations, ensuring safety training compliance, disposing of hazardous waste, coordinating with EHS to maintain a safe workplace, and conducting regular inspections of critical safety equipment.}
+
+\cvitem{Programming}{MATLAB, LabVIEW, Python, \LaTeX, Git, Arduino}
+\cvitem{Software}{Microscoft Office, Spot-On, $\mu$Manager, ImageJ, FIJI, autoCAD}
+\cvitem{Data Analysis}{Particle Tracking, Image Analysis, Stochastic Processes, Machine Vision, Image Deconvolution}
+\cvitem{Microscopy}{Transmission Microscopy, Fluorescent Microscopy, Light Sheet Fluorescent Microscopy, Total Internal Reflection Microscopy, Confocal Microscopy}
+\cvitem{Optical Systems}{Custom Optical Design, Laser Systems, Spatial Light Modulation, Remote Focusing, Accusto-Optic Tunable Filters, 4-F System Design}
+\cvitem{Electronics}{Multimeter proficiency, soldering, custom electronics design, multimodal control design, system timing control, DAQ-board interfacing, system control software deisgn, Arduino-based control, Raspberry-Pi based control}
+\cvitem{General Lab Proficiencies}{Chemical protocols, highly toxic chemical safety, fume hoods, cell culture, power tool use, general workshop skiills}
+\cvitem{Machine Shop}{Took a semester-long machine shop course at Wake Forest Univeristy in 2021. Certified as departmental machine shop operator following this course.}
+
 %----------------------------------------------------------------------------------------
 %	COMMUNICATION SKILLS SECTION
 %----------------------------------------------------------------------------------------
@@ -120,16 +125,12 @@
 \cventry{May 2022}{Symposium Talk}{Generating a 3-D Lattice of Photonic Spheres}{Winston-Salem, NC}{Wake Forest University}{}
 
 \input{conferences.tex}
-
-
 %----------------------------------------------------------------------------------------
 %	Teaching and Mentorship
 %----------------------------------------------------------------------------------------
 \input{teaching.tex}
 
-
 \input{mentorship.tex}
-
 
 %----------------------------------------------------------------------------------------
 %	Outreach Projects
@@ -160,7 +161,7 @@
 %	References
 %----------------------------------------------------------------------------------------
 
-\input{refs.tex}
+% \input{refs.tex}
 
 
 %----------------------------------------------------------------------------------------
