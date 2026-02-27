@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10,letterpaper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Alexander} % Your first name
+\familyname{Marshall} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Physicist}
+\address{1900 Glenacre Court $\vert$ Kernersville, North Carolina $\vert$ 27284}{}
+% \mobile{(336) 618 9851}
+\phone{(336) 618-9851}
+% \fax{(000) 111 1113}
+\email{AlexanderNMarshall@proton.me}
+\homepage{philosophiaephysica.org}{philosophiaephysica.org} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\extrainfo{Royster Fellow $ \vert $ Doctoral Candidate $\vert$ UNC-Chapel Hill}
+
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%  \quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\input{summerfundingplan.tex}
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2027}{The University of North Carolina at Chapel Hill}{Doctorate of Philosophy in Physics}{Chapel Hill, NC}{}{Royster Doctoral Fellow $\vert$ Exams Passed $\vert$ All But Dissertation}  % Arguments not required can be left empty
+\cventry{2025}{The University of North Carolina at Chapel Hill}{Master of Science in Physics}{Chapel Hill, NC}{}{Completed \textit{en route} to PhD}
+\cventry{2022}{Wake Forest University}{Physics B.S. $\vert$ Philosophy B.A. $\vert$ Mathematics Minor}{Winston-Salem, NC}{}{GPA 3.91 $\vert$ \textit{Summa Cum Laude} $\vert$ Honors in Physics $\vert$ Stamps Scholar} 
+
+\input{research.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Scholarships and Grants}
+\cventry{2022-2027}{Royster Foundation}{Royster Doctoral Fellowship}{Chapel Hill, NC}{UNC-Chapel Hill Graduate School}{Five-year doctoral recruitment fellowship. Provides extradepartmental funding for the majority of a five year doctoral program.}  % 
+\cventry{2018-2022}{Stamps Foundation}{Stamps Scholarship}{Chapel Hill, NC}{}{ Four-year scholarship awarded for academic merit. Covered all costs of attendance to Wake Forest University, including room and board. Also provided a technology grant and semesterly stipend.}
+\cventry{2019}{Wake Forest University}{Summer Research Project Grant}{Winston-Salem, NC}{}{Granted for summer anthropology project studying the cultural impact of viticulture in the Peleponnese.}
+
+
+%----------------------------------------------------------------------------------------
+%	Publications
+%----------------------------------------------------------------------------------------
+\input{pubs.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\section{Technical skills}
+% \cventry{2022-Present}{UNC-Chapel Hill Dept. of Environmental Health and Safety}{Labortory Safety Manager}{Chapel Hill, NC}{Responsibilities include writing the lab safety plan, ensuring compliance during day-to-day operations, ensuring safety training compliance, disposing of hazardous waste, coordinating with EHS to maintain a safe workplace, and conducting regular inspections of critical safety equipment.}
+
+\cventry{2022-Present}{UNC-Chapel Hill}{Labortory Safety Manager}{Chapel Hlill, NC}{ Dept. of Environmental Health and Safety}{Responsibilities include writing the lab safety plan, ensuring compliance during day-to-day operations, ensuring safety training compliance, disposing of hazardous waste, coordinating with EHS to maintain a safe workplace, and conducting regular inspections of critical safety equipment.}
+
+\cvitem{Programming}{MATLAB, LabVIEW, Python, \LaTeX, Git, Arduino}
+\cvitem{Software}{Microscoft Office, Spot-On, $\mu$Manager, ImageJ, FIJI, autoCAD}
+\cvitem{Data Analysis}{Particle Tracking, Image Analysis, Stochastic Processes, Machine Vision, Image Deconvolution}
+\cvitem{Microscopy}{Transmission Microscopy, Fluorescent Microscopy, Light Sheet Fluorescent Microscopy, Total Internal Reflection Microscopy, Confocal Microscopy}
+\cvitem{Optical Systems}{Custom Optical Design, Laser Systems, Spatial Light Modulation, Remote Focusing, Accusto-Optic Tunable Filters, 4-F System Design}
+\cvitem{Electronics}{Multimeter proficiency, soldering, custom electronics design, multimodal control design, system timing control, DAQ-board interfacing, system control software deisgn, Arduino-based control, Raspberry-Pi based control}
+\cvitem{General Lab Proficiencies}{Chemical protocols, highly toxic chemical safety, fume hoods, cell culture, power tool use, general workshop skiills}
+\cvitem{Machine Shop}{Took a semester-long machine shop course at Wake Forest Univeristy in 2021. Certified as departmental machine shop operator following this course.}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\section{Talks and Symposia}
+\cventry{November 17, 2025}{Master's Defense}{Physiological Strains in Poroelastic Media Induce Asymmetric Transport}{Chapel Hill, NC}{UNC-Chapel Hill}{}
+\cventry{October 1, 2025}{Symposium Talk}{Strain Alters Anomalous Diffusion in Poroelastic Media.}{Elon, NC}{Elon University}{}
+\cventry{September 16, 2025}{Thesis Proposal}{Diffusion in Strained Poroelastic Media}{Chapel Hill, NC}{UNC-Chapel Hill}{}
+\cventry{May 2022}{Honors Thesis Defense}{Generating a 3-D Lattice of Photonic Spheres}{Winston-Salem, NC}{Wake Forest University}{}
+\cventry{May 2022}{Symposium Talk}{Generating a 3-D Lattice of Photonic Spheres}{Winston-Salem, NC}{Wake Forest University}{}
+
+\input{conferences.tex}
+%----------------------------------------------------------------------------------------
+%	Teaching and Mentorship
+%----------------------------------------------------------------------------------------
+\input{teaching.tex}
+
+\input{mentorship.tex}
+
+%----------------------------------------------------------------------------------------
+%	Outreach Projects
+%----------------------------------------------------------------------------------------
+
+\section{Outreach}
+\cventry{2023-Present}{UNC-Chapel Hill}{Open Flexure Microscope and Molecular Stamper}{Chapel Hill, NC}{}{Initiatives planned for building microscopes in low-resource highschools in Eastern NC.}
+\cventry{2023-Present}{Morehead Planetarium and Science Center}{North Carolina Science Festival}{Chapel Hill, NC}{}{Each year, during this public outreach event the Superfine research group conducts science demos and research talks targeted at general audiences.}
+\cventry{2015--2017}{Wake Forest Baptist Medical Center}{Hospital Volunteer}{Winston-Salem, NC}{}{Volunteered in various patient-facing positions for over 300 hours.}
+
+
+%----------------------------------------------------------------------------------------
+%	Relevant Coursework
+%----------------------------------------------------------------------------------------
+%\section{Select Coursework}
+%
+%\cvitemwithcomment{}{Graduate Mathematical Methods}{2022}
+%\cvitemwithcomment{}{Graduate Quantum Mechanics}{2022}
+%\cvitemwithcomment{}{Graduate Classical Dynamics}{2022}
+%\cvitemwithcomment{}{Graduate Electromagnetism}{2023}
+%\cvitemwithcomment{}{Graduate Statistical Mechanics}{2023}
+%\cvitemwithcomment{}{Optics}{2024}
+%\cvitemwithcomment{}{Fluid Dynamics}{2025}
+%\cvitemwithcomment{}{Biophysics}{2025}
+%\cvitemwithcomment{}{Partial Differential Equations}{2022}
+%\cvitemwithcomment{}{Quantum Computing}{2022}
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+
+% \input{refs.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Fluent}{Native Speaker}
+\cvitemwithcomment{Modern Greek}{Intermediate}{Conversational speaker.}
+\cvitemwithcomment{Classical Latin}{Intermediate}{Seven years of formal instruction}
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Personal Interests}
+
+% \renewcommand{\listitemsymbol}{~-} % Changes the symbol used for lists
+
+% \cvlistdoubleitem{Music}{Philosophy}
+% \cvlistdoubleitem{Running}{Backpacking}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
